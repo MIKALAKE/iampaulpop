@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { hideSplashScreen } from 'vite-plugin-splash-screen/runtime';
 
 import Navigator from 'Navigator';
+import { TopBar } from 'Components';
+import { LanguageProvider, ThemeProvider } from 'Providers';
 
 const App = () => {
   useEffect(() => {
@@ -13,9 +15,17 @@ const App = () => {
   }, []);
 
   return (
-    <div className='h-screen w-screen'>
-      <Navigator />
-    </div>
+    <ThemeProvider defaultTheme='system' storageKey='vite-ui-theme'>
+      <div className='h-dvh w-screen'>
+        <LanguageProvider>
+          <TopBar />
+
+          <div className='overflow-y-auto'>
+            <Navigator />
+          </div>
+        </LanguageProvider>
+      </div>
+    </ThemeProvider>
   );
 };
 
