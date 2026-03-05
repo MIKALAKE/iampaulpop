@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { hideSplashScreen } from 'vite-plugin-splash-screen/runtime';
 
+import Navigator from 'Navigator';
+
 const App = () => {
   useEffect(() => {
     requestAnimationFrame(() => {
@@ -10,7 +12,11 @@ const App = () => {
     });
   }, []);
 
-  return <div className='h-screen w-screen'>Hello</div>;
+  return (
+    <div className='h-screen w-screen'>
+      <Navigator />
+    </div>
+  );
 };
 
 export default App;

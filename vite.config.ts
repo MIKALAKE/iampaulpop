@@ -16,7 +16,7 @@ export default defineConfig({
     viteEslint(),
     splashScreen({
       logoSrc: fileURLToPath(new URL('src/show/assets/react.svg', import.meta.url)),
-      splashBg: '#4f5b93',
+      splashBg: 'hsl(220, 20%, 8%)',
       loaderType: 'dots',
       loaderBg: '#ffffff',
       minDurationMs: 500,
