@@ -1,9 +1,7 @@
-export function App() {
-  return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="font-medium">Hello World</div>
-    </div>
-  )
-}
+import { ComponentExample } from "@/components/component-example";
 
-export default App
+const App = () => {
+  return <ComponentExample />;
+};
+
+export default App;

@@ -1,17 +1,59 @@
 {
   "compilerOptions": {
+    "paths": {
+      "Root/package.json": ["./package.json"],
+
+      "Api": ["./src/process/api"],
+      "Api/*": ["./src/process/api/*"],
+      "Constants": ["./src/process/constants"],
+      "Constants/*": ["./src/process/constants/*"],
+      "Helpers": ["./src/process/helpers"],
+      "Helpers/*": ["./src/process/helpers/*"],
+      "Hooks": ["./src/process/hooks"],
+      "Hooks/*": ["./src/process/hooks/*"],
+      "Locales": ["./src/process/locales"],
+      "Locales/*": ["./src/process/locales/*"],
+      "Reducers": ["./src/process/reducers"],
+      "Reducers/*": ["./src/process/reducers/*"],
+      "Redux": ["./src/process/redux"],
+      "Redux/*": ["./src/process/redux/*"],
+      "Repositories": ["./src/process/repositories"],
+      "Repositories/*": ["./src/process/repositories/*"],
+      "Routes": ["./src/process/routes"],
+      "Routes/*": ["./src/process/routes/*"],
+      "Sagas": ["./src/process/sagas"],
+      "Sagas/*": ["./src/process/sagas/*"],
+      "Selectors": ["./src/process/selectors"],
+      "Selectors/*": ["./src/process/selectors/*"],
+      "Services": ["./src/process/services"],
+      "Services/*": ["./src/process/services/*"],
+      "Types": ["./src/process/types"],
+      "Types/*": ["./src/process/types/*"],
+
+      "Application": ["./src/show/application"],
+      "Application/*": ["./src/show/application/*"],
+      "Assets": ["./src/show/assets"],
+      "Assets/*": ["./src/show/assets/*"],
+      "Components": ["./src/show/components"],
+      "Components/*": ["./src/show/components/*"],
+      "Navigator": ["./src/show/navigator"],
+      "Navigator/*": ["./src/show/navigator/*"],
+      "Pages": ["./src/show/pages"],
+      "Pages/*": ["./src/show/pages/*"],
+      "Providers": ["./src/show/providers"],
+      "Providers/*": ["./src/show/providers/*"]
+    },
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "ES2022",
+    "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "types": ["vite/client"],
     "skipLibCheck": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
@@ -20,13 +62,8 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "noUncheckedSideEffectImports": true
   },
   "include": ["src"]
 }
