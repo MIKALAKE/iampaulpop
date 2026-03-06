@@ -15,14 +15,14 @@ const App = () => {
   }, []);
 
   return (
-    <ThemeProvider defaultTheme='system' storageKey='vite-ui-theme'>
+    <ThemeProvider defaultTheme='system' storageKey='paul-pop-ui-theme'>
       <div className='h-dvh w-screen'>
         <LanguageProvider>
           <TopBar />
 
-          <div className='overflow-y-auto'>
+          <main className='overflow-y-auto'>
             <Navigator />
-          </div>
+          </main>
         </LanguageProvider>
       </div>
     </ThemeProvider>

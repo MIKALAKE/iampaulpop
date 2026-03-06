@@ -1,0 +1,8 @@
+{
+  "hero": {
+    "description": "Front-end dev who turns coffee into React components",
+    "greeting": "Hi, I'm",
+    "headline": "Building clean, performant interfaces that users love.",
+    "personalNote": "Hiking enthusiast, football fan, motorsport geek"
+  }
+}

@@ -1,10 +1,12 @@
 {
-  "dark": "Dark",
-  "system": "System",
-  "light": "Light",
   "about": "About",
   "contact": "Contact",
+  "dark": "Dark",
   "experience": "Experience",
+  "getInTouch": "Get in Touch",
+  "light": "Light",
   "projects": "Projects",
-  "skills": "Skills"
+  "skills": "Skills",
+  "system": "System",
+  "viewMyWork": "View My Work"
 }
