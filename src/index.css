@@ -129,3 +129,39 @@
     @apply font-mono;
   }
 }
+
+@layer components {
+  .hexagon-skeleton {
+    position: relative;
+    width: 60px;
+    height: 34.64px;
+    background: #e5e7eb;
+    margin: 17.32px 0;
+  }
+
+  .hexagon-skeleton:before,
+  .hexagon-skeleton:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+  }
+
+  .hexagon-skeleton:before {
+    bottom: 100%;
+    border-bottom: 17.32px solid #e5e7eb;
+  }
+
+  .hexagon-skeleton:after {
+    top: 100%;
+    border-top: 17.32px solid #e5e7eb;
+  }
+}
+
+.hexagon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 60px);
+  gap: 10px;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

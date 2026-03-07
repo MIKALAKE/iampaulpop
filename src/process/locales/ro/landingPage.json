@@ -1,8 +1,57 @@
 {
+  "about": {
+    "description": "Sunt un dezvoltator front-end pasionat, specializat în React, TypeScript și Tailwind CSS. Cu peste 3 ani de experiență profesională, construiesc interfețe responsive și intuitive, cu focus pe performanță și cod curat. Cred că software-ul excelent e invizibil — pur și simplu funcționează.",
+    "highlight": {
+      "frontend": "3+ ani de dezvoltare profesională în React",
+      "backend": "Focus puternic pe performanță și UX",
+      "mobile": "Experiență cu PWA-uri și design mobile-first",
+      "cloud": "Jucător de echipă colaborativ, cu expertiză în code review",
+      "leadership": "Experiență în leadership și mentorat de echipă",
+      "opensource": "Contributor activ la proiecte open-source"
+    }
+  },
+
+  "experience": {
+    "frontendDeveloper": "Dezvoltator Web Front-End",
+    "qaAnalyst": "Analist QA",
+    "achievements": {
+      "builtGISPlatforms": "Construiesc platforme GIS moderne și scalabile, precum și soluții digitale pentru instituții de stat din România",
+      "developedPublicSectorApps": "Dezvolt aplicații web robuste pentru sectorul public, cu impact real în viața utilizatorilor",
+      "specializedFrontendArchitectures": "Specializat în dezvoltarea de arhitecturi front-end robuste, folosind pattern-uri moderne React",
+      "managedReduxState": "Gestionez stări complexe ale aplicațiilor folosind Redux Toolkit pentru un management scalabil al stării",
+      "craftedAccessibleUI": "Creez interfețe curate, responsive și accesibile folosind Tailwind CSS și shadcn/ui",
+      "deliveredHighPerformanceUX": "Livrez experiențe UI/UX excelente și de înaltă performanță, cu focus pe calitate și utilizabilitate",
+      "builtResponsiveUI": "Construiesc componente UI responsive cu React, TypeScript și Tailwind CSS",
+      "managedComplexState": "Gestionez stări complexe ale aplicațiilor folosind Redux Toolkit",
+      "optimizedPerformance": "Optimizez performanța pentru încărcări rapide și interacțiuni fluide",
+      "collaboratedWithDesigners": "Colaborez strâns cu designerii pentru a livra interfețe pixel-perfect",
+      "conductedCodeReviews": "Realizez code review-uri riguroase pentru menținerea unui cod de calitate înaltă",
+      "identifiedBugs": "Identific, reproduc și documentez bug-uri pe parcursul etapelor de dezvoltare",
+      "collaboratedCrossFunctional": "Colaborez cu echipe cross-funcționale pentru o calitate constantă a produsului",
+      "gainedQAUnderstanding": "Dobândesc o înțelegere profundă a metodologiilor și pipeline-urilor QA"
+    }
+  },
+
   "hero": {
-    "description": "Dezvoltator front-end care transformă cafeaua în componente React",
-    "greeting": "Bună, Sunt",
-    "headline": "Construiesc interfețe curate și performante pe care utilizatorii le adoră.",
-    "personalNote": "Pasionat de drumeții, fan fotbal, nebun după motorsport"
+    "description": "Dev front-end care transformă cafeaua în componente React",
+    "greeting": "Salut, sunt",
+    "headline": "Construiesc interfețe curate și performante, pe care utilizatorii le adoră.",
+    "personalNote": "Pasionat de drumeții, fan fotbal, geek de motorsport"
+  },
+
+  "projects": {
+    "vanillaCleaning": {
+      "description": "Un site de business construit cu accent pe SEO și design mobile-first. Dezvoltat pentru promovarea unei afaceri locale de curățenie din Cluj-Napoca."
+    },
+    "invitatio": {
+      "description": "O platformă completă de invitații digitale pentru evenimente, creată pentru afaceri care doresc să creeze invitații impresionante pentru momentele speciale. Include managementul RSVP, cronometru, muzică de fundal, navigare către eveniment și opțiuni extinse de personalizare pentru a se potrivi perfect stilului oricărui eveniment."
+    }
+  },
+
+  "skills": {
+    "categories": {
+      "frontend": "Frontend",
+      "tools": "Unelte"
+    }
   }
 }

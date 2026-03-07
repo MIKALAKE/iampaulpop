@@ -1,12 +1,13 @@
 {
-  "light": "Luminos",
-  "dark": "Întunecat",
-  "system": "Sistem",
   "about": "Despre",
   "contact": "Contact",
+  "dark": "Întunecat",
   "experience": "Experiență",
+  "getInTouch": "Ia legătura",
+  "light": "Luminos",
+  "present": "prezent",
   "projects": "Proiecte",
   "skills": "Competențe",
-  "getInTouch": "Ia legătura",
+  "system": "Sistem",
   "viewMyWork": "Vezi munca mea"
 }

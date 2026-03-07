@@ -1,8 +1,57 @@
 {
+  "about": {
+    "description": "I'm a passionate front-end developer specializing in React, TypeScript, and Tailwind CSS. With 3+ years of professional experience, I craft responsive, user-friendly interfaces with a strong focus on performance and clean code. I believe great software is invisible — it just works.",
+    "highlight": {
+      "frontend": "3+ years of professional React development",
+      "backend": "Strong focus on performance and UX",
+      "mobile": "Experience with PWAs and mobile-first design",
+      "cloud": "Collaborative team player with code review expertise",
+      "leadership": "Team leadership and mentoring experience",
+      "opensource": "Active contributor to open-source projects"
+    }
+  },
+
+  "experience": {
+    "frontendDeveloper": "Frontend Web Developer",
+    "qaAnalyst": "QA Analyst",
+    "achievements": {
+      "builtGISPlatforms": "Building modern, scalable GIS platforms and digital solutions for Romanian state institutions",
+      "developedPublicSectorApps": "Developing robust web applications for public sector with real-world impact",
+      "specializedFrontendArchitectures": "Specializing in developing robust front-end architectures with modern React patterns",
+      "managedReduxState": "Managing complex application state using Redux Toolkit for scalable state management",
+      "craftedAccessibleUI": "Crafting clean, responsive, and accessible user interfaces using Tailwind CSS and shadcn/ui",
+      "deliveredHighPerformanceUX": "Delivering excellent UI/UX and high-performance user experiences focused on quality and usability",
+      "builtResponsiveUI": "Building responsive UI components with React, TypeScript, and Tailwind CSS",
+      "managedComplexState": "Managing complex application state using Redux Toolkit",
+      "optimizedPerformance": "Optimizing performance for fast page loads and smooth interactions",
+      "collaboratedWithDesigners": "Collaborating closely with designers to deliver pixel-perfect interfaces",
+      "conductedCodeReviews": "Conducting thorough code reviews to maintain high code quality",
+      "identifiedBugs": "Identifying, reproducing, and documenting bugs across development stages",
+      "collaboratedCrossFunctional": "Collaborating with cross-functional teams for consistent quality",
+      "gainedQAUnderstanding": "Gaining deep understanding of QA methodologies and pipelines"
+    }
+  },
+
   "hero": {
     "description": "Front-end dev who turns coffee into React components",
     "greeting": "Hi, I'm",
     "headline": "Building clean, performant interfaces that users love.",
     "personalNote": "Hiking enthusiast, football fan, motorsport geek"
+  },
+
+  "projects": {
+    "vanillaCleaning": {
+      "description": "A business website built with a strong focus on SEO and mobile-first design. Developed to promote a local cleaning business in Cluj-Napoca."
+    },
+    "invitatio": {
+      "description": "A comprehensive event invitation platform designed for businesses to create stunning digital invitations for special moments. Features include RSVP management, countdown timers, background music, event navigation, and extensive customization options to perfectly match any event's unique style and requirements."
+    }
+  },
+
+  "skills": {
+    "categories": {
+      "frontend": "Frontend",
+      "tools": "Tools"
+    }
   }
 }
