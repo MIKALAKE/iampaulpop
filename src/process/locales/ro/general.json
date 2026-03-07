@@ -1,14 +1,15 @@
 {
   "about": "Despre",
+  "buildBy": "Creat de Paul Pop",
   "contact": "Contact",
   "dark": "Întunecat",
   "experience": "Experiență",
+  "fitness": "Fitness",
   "getInTouch": "Ia legătura",
   "light": "Luminos",
   "present": "prezent",
   "projects": "Proiecte",
   "skills": "Competențe",
   "system": "Sistem",
-  "viewMyWork": "Vezi munca mea",
-  "fitness": "Fitness"
+  "viewMyWork": "Vezi munca mea"
 }

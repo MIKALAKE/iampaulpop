@@ -20,7 +20,7 @@ const renderHighlight = (item: string, i: any) => (
 
 const AboutMe = () => {
   return (
-    <section id='about' className='w-full'>
+    <section id='about' className='w-full py-24'>
       <div className='container mx-auto max-w-5xl'>
         <SectionHeading index='01' title={I18n.t('general:about')} />
         <div className='mt-10 grid gap-12 md:grid-cols-2'>

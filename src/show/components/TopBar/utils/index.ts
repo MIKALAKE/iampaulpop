@@ -4,6 +4,10 @@ export const MENU_ITEMS = [
     href: '#about',
   },
   {
+    name: 'general:fitness',
+    href: '#fitness',
+  },
+  {
     name: 'general:experience',
     href: '#experience',
   },

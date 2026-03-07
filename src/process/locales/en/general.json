@@ -1,14 +1,15 @@
 {
   "about": "About",
+  "buildBy": "Built by Paul Pop",
   "contact": "Contact",
   "dark": "Dark",
   "experience": "Experience",
+  "fitness": "Fitness",
   "getInTouch": "Get in Touch",
   "light": "Light",
   "present": "present",
   "projects": "Projects",
   "skills": "Skills",
   "system": "System",
-  "viewMyWork": "View My Work",
-  "fitness": "Fitness"
+  "viewMyWork": "View My Work"
 }

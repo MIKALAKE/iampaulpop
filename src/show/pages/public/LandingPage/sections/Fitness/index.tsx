@@ -21,7 +21,7 @@ const Fitness = () => {
   const showError = athleteError || activitiesError;
 
   return (
-    <section id='fitness' className='w-full'>
+    <section id='fitness' className='w-full py-24'>
       <div className='container mx-auto max-w-5xl'>
         <SectionHeading index='02' title={I18n.t('general:fitness')} />
 
