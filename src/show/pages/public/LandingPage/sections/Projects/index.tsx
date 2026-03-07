@@ -77,7 +77,7 @@ const Projects = () => {
   return (
     <section id='projects' className='px-6 py-24'>
       <div className='container mx-auto max-w-5xl'>
-        <SectionHeading index='04' title={I18n.t('general:projects')} />
+        <SectionHeading index='05' title={I18n.t('general:projects')} />
         <div className='mt-10 space-y-8'>{projects.map(renderProject)}</div>
       </div>
     </section>

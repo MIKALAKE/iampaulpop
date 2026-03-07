@@ -4,24 +4,12 @@ import { fileURLToPath, URL } from 'url';
 import viteEslint from 'vite-plugin-eslint';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react-swc';
-import { splashScreen } from 'vite-plugin-splash-screen';
 
 // Add ImportMeta type augmentation for 'url' property
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-    viteEslint(),
-    splashScreen({
-      logoSrc: fileURLToPath(new URL('src/show/assets/react.svg', import.meta.url)),
-      splashBg: 'hsl(220, 20%, 8%)',
-      loaderType: 'dots',
-      loaderBg: '#ffffff',
-      minDurationMs: 500,
-    }),
-  ],
+  plugins: [react(), tailwindcss(), viteEslint()],
   server: {
     open: true, // automatically open the app in the browser
   },

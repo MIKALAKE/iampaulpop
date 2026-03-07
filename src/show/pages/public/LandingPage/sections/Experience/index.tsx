@@ -98,7 +98,7 @@ const Experience = () => {
   return (
     <section id='experience' className='w-full py-24'>
       <div className='container mx-auto mb-12 max-w-5xl'>
-        <SectionHeading index='02' title={I18n.t('general:experience')} />
+        <SectionHeading index='03' title={I18n.t('general:experience')} />
       </div>
 
       <div className='flex flex-col gap-20'>{experiences.map(renderExperience)}</div>

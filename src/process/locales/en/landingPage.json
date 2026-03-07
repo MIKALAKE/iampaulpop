@@ -36,7 +36,7 @@
     "description": "Front-end dev who turns coffee into React components",
     "greeting": "Hi, I'm",
     "headline": "Building clean, performant interfaces that users love.",
-    "personalNote": "Hiking enthusiast, football fan, motorsport geek"
+    "personalNote": "Running enthusiast, football fan, motorsport geek"
   },
 
   "projects": {
@@ -52,6 +52,25 @@
     "categories": {
       "frontend": "Frontend",
       "tools": "Tools"
+    }
+  },
+
+  "fitness": {
+    "description": "When I'm not coding, you'll find me staying active. Here's a glimpse into my fitness journey through my latest Strava activities.",
+    "stats": {
+      "activities": "Activities",
+      "followers": "Followers",
+      "following": "Following",
+      "totalDistance": "Total Distance",
+      "totalElevation": "Total Elevation",
+      "recentActivities": "Recent Activities",
+      "distance": "Distance",
+      "time": "Time",
+      "elevation": "Elevation",
+      "pace": "Pace",
+      "noActivities": "No recent activities found.",
+      "loadingActivities": "Loading activities...",
+      "errorLoading": "Unable to load activities at the moment."
     }
   }
 }

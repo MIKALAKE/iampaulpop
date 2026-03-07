@@ -36,7 +36,7 @@
     "description": "Dev front-end care transformă cafeaua în componente React",
     "greeting": "Salut, sunt",
     "headline": "Construiesc interfețe curate și performante, pe care utilizatorii le adoră.",
-    "personalNote": "Pasionat de drumeții, fan fotbal, geek de motorsport"
+    "personalNote": "Pasionat de alergare, fan fotbal, geek de motorsport"
   },
 
   "projects": {
@@ -52,6 +52,25 @@
     "categories": {
       "frontend": "Frontend",
       "tools": "Unelte"
+    }
+  },
+
+  "fitness": {
+    "description": "Când nu programez, mă găsești făcând sport. Iată o privire în călătoria mea de fitness prin cele mai recente activități Strava.",
+    "stats": {
+      "activities": "Activități",
+      "followers": "Urmăritori",
+      "following": "Urmăresc",
+      "totalDistance": "Distanța Totală",
+      "totalElevation": "Elevația Totală",
+      "recentActivities": "Activități Recente",
+      "distance": "Distanța",
+      "time": "Timpul",
+      "elevation": "Elevația",
+      "pace": "Ritmul",
+      "noActivities": "Nu s-au găsit activități recente.",
+      "loadingActivities": "Se încarcă activitățile...",
+      "errorLoading": "Nu pot încărca activitățile în acest moment."
     }
   }
 }

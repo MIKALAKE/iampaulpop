@@ -60,7 +60,7 @@ const renderSkill = (skill: string) => {
 const Skills = () => (
   <section id='skills' className='w-full py-24'>
     <div className='container mx-auto max-w-5xl'>
-      <SectionHeading index='03' title={I18n.t('general:skills')} />
+      <SectionHeading index='04' title={I18n.t('general:skills')} />
 
       <div className='mt-10 grid gap-8 md:grid-cols-1'>{skillsData.map(renderCategory)}</div>
     </div>

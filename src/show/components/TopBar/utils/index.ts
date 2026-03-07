@@ -15,8 +15,10 @@ export const MENU_ITEMS = [
     name: 'general:projects',
     href: '#projects',
   },
-  {
-    name: 'general:contact',
-    href: '#contact',
-  },
+
+  // TODO: Design an awesome contact section
+  // {
+  //   name: 'general:contact',
+  //   href: '#contact',
+  // },
 ];

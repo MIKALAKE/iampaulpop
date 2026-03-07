@@ -1,4 +1,4 @@
-import { AboutMe, Experience, Hero, Projects, Skills } from './sections';
+import { AboutMe, Experience, Fitness, Hero, Projects, Skills } from './sections';
 
 const LandingPage = () => {
   return (
@@ -6,6 +6,8 @@ const LandingPage = () => {
       <Hero />
 
       <AboutMe />
+
+      <Fitness />
 
       <Experience />
 

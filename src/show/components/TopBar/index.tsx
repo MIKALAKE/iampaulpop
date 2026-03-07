@@ -10,7 +10,7 @@ const renderTopBarItem = (item: { name: string; href: string }) => (
     key={item.name}
     aria-label={item.name}
     href={item.href}
-    className='cursor-pointer rounded-full px-5 py-2 transition-all duration-100 ease-in-out hover:bg-white/10 hover:shadow-md dark:text-white dark:hover:bg-white/15'>
+    className='cursor-pointer rounded-full px-5 py-2 transition-all duration-100 ease-in-out hover:bg-white/10 hover:shadow-sm dark:text-white dark:shadow-white/10 dark:hover:bg-white/15 dark:hover:shadow-md'>
     {I18n.t(item.name)}
   </a>
 );

@@ -48,7 +48,7 @@ const Hero = () => (
       </a>
 
       <a
-        href='#contact'
+        href='mailto:paulpop122@gmail.com'
         className='text-muted-foreground hover:text-primary rounded-sm px-4 py-2.5 text-center font-mono text-xs transition-colors duration-200 sm:text-sm'>
         {I18n.t('general:getInTouch')} {'->'}
       </a>
