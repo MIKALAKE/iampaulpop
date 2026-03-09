@@ -20,6 +20,8 @@ const Fitness = () => {
   const showLoading = athleteLoading || activitiesLoading;
   const showError = athleteError || activitiesError;
 
+  const nikeActivities = activities.filter((activity: any) => activity.device_name === 'Nike');
+
   return (
     <section id='fitness' className='w-full py-24'>
       <div className='container mx-auto max-w-5xl'>
@@ -64,7 +66,7 @@ const Fitness = () => {
 
               {activities && activities.length > 0 ? (
                 <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
-                  {activities.map(renderActivity)}
+                  {nikeActivities.map(renderActivity)}
                 </div>
               ) : (
                 <div className='py-8 text-center'>
