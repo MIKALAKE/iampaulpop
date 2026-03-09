@@ -13,6 +13,10 @@ export const router = createBrowserRouter([
         index: true,
         element: <Pages.PUBLIC.LandingPage />,
       },
+      {
+        path: '*',
+        element: <Pages.PUBLIC.NotFound />,
+      },
     ],
   },
 ]);

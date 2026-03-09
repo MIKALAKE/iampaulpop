@@ -8,7 +8,11 @@ export function useAthlete() {
 
   useEffect(() => {
     getAthlete()
-      .then(setAthlete)
+      .then(d => {
+        if (!d.errors && !d.message) {
+          setAthlete(d);
+        }
+      })
       .catch(e => setError(e.message))
       .finally(() => setLoading(false));
   }, []);

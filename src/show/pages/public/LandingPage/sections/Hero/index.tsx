@@ -32,7 +32,7 @@ const Hero = () => (
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5 }}
-      className='text-muted-foreground mb-20 max-w-xl text-sm leading-relaxed sm:text-lg'>
+      className='text-muted-foreground mb-4 max-w-xl text-sm leading-relaxed sm:text-lg'>
       {I18n.t('landingPage:hero.personalNote')}
     </motion.p>
 

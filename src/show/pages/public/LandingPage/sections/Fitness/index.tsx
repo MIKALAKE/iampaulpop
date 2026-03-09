@@ -6,21 +6,17 @@ import { useActivities } from 'Hooks/useActivity';
 import { ActivityCard, AthleteStats, SectionHeading } from 'Components';
 
 const renderActivity = (activity: any, index: number) => (
-  <ActivityCard key={activity.id} activity={activity} index={index} />
+  <ActivityCard key={activity?.id} activity={activity} index={index} />
 );
 
 const Fitness = () => {
   const { athlete, loading: athleteLoading, error: athleteError } = useAthlete();
-  const {
-    activities,
-    loading: activitiesLoading,
-    error: activitiesError,
-  } = useActivities({ per_page: 6 });
+  const { activities = [], loading: activitiesLoading, error: activitiesError } = useActivities();
 
   const showLoading = athleteLoading || activitiesLoading;
   const showError = athleteError || activitiesError;
 
-  const nikeActivities = activities.filter((activity: any) => activity.device_name === 'Nike');
+  const nikeActivities = activities?.filter((activity: any) => activity.device_name === 'Nike');
 
   return (
     <section id='fitness' className='w-full py-24'>
@@ -64,9 +60,9 @@ const Fitness = () => {
                 </h3>
               </div>
 
-              {activities && activities.length > 0 ? (
+              {activities && activities?.length > 0 ? (
                 <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
-                  {nikeActivities.map(renderActivity)}
+                  {nikeActivities?.map(renderActivity)}
                 </div>
               ) : (
                 <div className='py-8 text-center'>

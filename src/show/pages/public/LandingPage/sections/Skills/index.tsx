@@ -43,17 +43,21 @@ const renderCategory = (category: (typeof skillsData)[number], i: number) => (
   </motion.div>
 );
 
-const renderSkill = (skill: string) => {
+const renderSkill = (skill: string, i: number) => {
   const logoSrc = Logos[skill.toLowerCase() as keyof typeof Logos];
 
   return (
-    <span
+    <motion.span
       key={skill}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: i * 0.09 }}
       className='bg-secondary text-secondary-foreground border-border hover:border-primary/50 text-md flex items-center rounded-sm border px-3 py-1.5 font-mono transition-colors'>
       <img src={logoSrc} alt={`${skill} logo`} className='mr-2 h-8 w-8' />
 
       {skill}
-    </span>
+    </motion.span>
   );
 };
 

@@ -12,6 +12,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss(), viteEslint()],
   server: {
     open: true, // automatically open the app in the browser
+    port: 5176,
   },
   resolve: {
     alias: [

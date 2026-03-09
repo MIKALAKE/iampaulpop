@@ -1,23 +1,24 @@
 import css from './css.svg';
-import figma from './figma.svg';
-import flowbite from './flowbite.svg';
 import git from './git.svg';
+import vite from './vite.svg';
+import yarn from './yarn.svg';
+import figma from './figma.svg';
+import react from './react.svg';
+import redux from './redux.svg';
 import github from './github.svg';
 import gitlab from './gitlab.svg';
-import javascript from './javascript.svg';
 import motion from './motion.svg';
-import netlify from './netlify.svg';
-import react from './react.svg';
-import reactrouter from './reactrouter.svg';
-import redux from './redux.svg';
 import shadcn from './shadcn.svg';
-import storybook from './storybook.svg';
-import tailwindcss from './tailwindcss.svg';
-import typescript from './typescript.svg';
 import vercel from './vercel.svg';
-import vite from './vite.svg';
 import vscode from './vscode.svg';
-import yarn from './yarn.svg';
+import netlify from './netlify.svg';
+import flowbite from './flowbite.svg';
+import linkedin from './linkedin.svg';
+import storybook from './storybook.svg';
+import javascript from './javascript.svg';
+import typescript from './typescript.svg';
+import reactrouter from './reactrouter.svg';
+import tailwindcss from './tailwindcss.svg';
 
 export {
   css,
@@ -27,6 +28,7 @@ export {
   github,
   gitlab,
   javascript,
+  linkedin,
   motion,
   netlify,
   react,

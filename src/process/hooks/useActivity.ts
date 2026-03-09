@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getActivities } from '../api/stravaClient';
 
-export function useActivities({ per_page = 10, page = 1 } = {}) {
+export function useActivities() {
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -9,9 +9,9 @@ export function useActivities({ per_page = 10, page = 1 } = {}) {
   useEffect(() => {
     let cancelled = false;
 
-    getActivities({ per_page, page })
+    getActivities()
       .then(d => {
-        if (!cancelled) setActivities(d);
+        if (!cancelled && !d.errors && !d.message) setActivities(d);
       })
       .catch(e => {
         if (!cancelled) setError(e.message);
@@ -23,7 +23,7 @@ export function useActivities({ per_page = 10, page = 1 } = {}) {
     return () => {
       cancelled = true;
     };
-  }, [per_page, page]);
+  }, []);
 
   return { activities, loading, error };
 }
