@@ -1,20 +1,31 @@
+import { Helmet } from 'react-helmet-async';
+
+import I18n from 'Locales';
+
 import { AboutMe, Experience, Fitness, Hero, Projects, Skills } from './sections';
 
 const LandingPage = () => {
   return (
-    <div className='mx-auto flex h-full w-full flex-col items-center justify-center gap-44 px-7 lg:max-w-5xl lg:px-5'>
-      <Hero />
+    <>
+      <Helmet>
+        <title>{I18n.t('helmet:title')}</title>
+        <meta name='description' content={I18n.t('helmet:description')} />
+      </Helmet>
 
-      <AboutMe />
+      <div className='mx-auto flex h-full w-full flex-col items-center justify-center gap-44 px-7 lg:max-w-5xl lg:px-5'>
+        <Hero />
 
-      <Fitness />
+        <AboutMe />
 
-      <Experience />
+        <Fitness />
 
-      <Skills />
+        <Experience />
 
-      <Projects />
-    </div>
+        <Skills />
+
+        <Projects />
+      </div>
+    </>
   );
 };
 
