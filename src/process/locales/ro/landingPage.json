@@ -32,6 +32,11 @@
     }
   },
 
+  "cv": {
+    "description": "Un rezumat al experienței și abilităților mele. Descarcă versiunea completă mai jos.",
+    "download": "Descarcă CV"
+  },
+
   "hero": {
     "description": "Dev front-end care transformă cafeaua în componente React",
     "greeting": "Salut, sunt",

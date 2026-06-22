@@ -10,3 +10,8 @@ declare module '*.svg?react' {
   const content: FC<SVGProps<SVGElement>>;
   export default content;
 }
+
+declare module '*.pdf' {
+  const content: string;
+  export default content;
+}

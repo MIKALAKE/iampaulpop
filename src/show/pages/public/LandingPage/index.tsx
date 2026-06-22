@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 import I18n from 'Locales';
 
-import { AboutMe, Experience, Fitness, Hero, Projects, Skills } from './sections';
+import { AboutMe, CV, Experience, Fitness, Hero, Projects, Skills } from './sections';
 
 const LandingPage = () => {
   return (
@@ -24,6 +24,8 @@ const LandingPage = () => {
         <Skills />
 
         <Projects />
+
+        <CV />
       </div>
     </>
   );

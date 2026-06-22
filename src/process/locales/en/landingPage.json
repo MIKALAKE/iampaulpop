@@ -32,6 +32,11 @@
     }
   },
 
+  "cv": {
+    "description": "A snapshot of my experience and skills. Grab the full version below.",
+    "download": "Download CV"
+  },
+
   "hero": {
     "description": "Front-end dev who turns coffee into React components",
     "greeting": "Hi, I'm",

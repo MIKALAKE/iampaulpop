@@ -24,9 +24,8 @@ const experiences = [
   {
     titleKey: 'landingPage:experience.frontendDeveloper',
     company: 'Luminos Software',
-    period: 'Jun 2022 — Present',
-    startDate: '06-01-2022',
-    endDate: '06-01-2025',
+    startDate: '2022-06-01',
+    endDate: '2025-06-01',
     location: 'Cluj-Napoca',
     order: 2,
     achievementKeys: [
@@ -40,8 +39,8 @@ const experiences = [
   {
     titleKey: 'landingPage:experience.qaAnalyst',
     company: 'Quantic Lab SRL',
-    startDate: '11-01-2022',
-    endDate: '02-01-2025',
+    startDate: '2022-11-01',
+    endDate: '2025-02-01',
     location: 'Cluj-Napoca',
     order: 3,
     achievementKeys: [
