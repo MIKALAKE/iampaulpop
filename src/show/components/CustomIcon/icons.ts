@@ -1,5 +1,6 @@
 import {
   Apple,
+  ArrowUp,
   BadgeCheck,
   Ban,
   Building2,
@@ -38,6 +39,7 @@ import { GreatBritain, Romania } from './Flags';
 
 export {
   Apple,
+  ArrowUp,
   BadgeCheck,
   Ban,
   Building2,
