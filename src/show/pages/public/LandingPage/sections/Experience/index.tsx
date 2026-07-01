@@ -97,7 +97,8 @@ const Experience = () => {
   return (
     <section id='experience' className='w-full py-24'>
       <div className='container mx-auto mb-12 max-w-5xl'>
-        <SectionHeading index='03' title={I18n.t('general:experience')} />
+        {/* index shifted 03→02 while Fitness is hidden; restore to 03 when Fitness returns */}
+        <SectionHeading index='02' title={I18n.t('general:experience')} />
       </div>
 
       <div className='flex flex-col gap-20'>{experiences.map(renderExperience)}</div>

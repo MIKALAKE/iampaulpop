@@ -64,7 +64,8 @@ const renderSkill = (skill: string, i: number) => {
 const Skills = () => (
   <section id='skills' className='w-full py-24'>
     <div className='container mx-auto max-w-5xl'>
-      <SectionHeading index='04' title={I18n.t('general:skills')} />
+      {/* index shifted 04→03 while Fitness is hidden; restore to 04 when Fitness returns */}
+      <SectionHeading index='03' title={I18n.t('general:skills')} />
 
       <div className='mt-10 grid gap-8 md:grid-cols-1'>{skillsData.map(renderCategory)}</div>
     </div>
