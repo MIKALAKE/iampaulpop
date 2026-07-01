@@ -2,7 +2,8 @@ import { Helmet } from 'react-helmet-async';
 
 import I18n from 'Locales';
 
-import { AboutMe, CV, Experience, Fitness, Hero, Projects, Skills } from './sections';
+// NOTE: Fitness temporarily hidden while the Strava API is down
+import { AboutMe, CV, Experience, Hero, Projects, Skills } from './sections';
 
 const LandingPage = () => {
   return (
@@ -17,7 +18,8 @@ const LandingPage = () => {
 
         <AboutMe />
 
-        <Fitness />
+        {/* Fitness temporarily hidden while the Strava API is down */}
+        {/* <Fitness /> */}
 
         <Experience />
 

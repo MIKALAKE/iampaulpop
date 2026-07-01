@@ -3,10 +3,11 @@ export const MENU_ITEMS = [
     name: 'general:about',
     href: '#about',
   },
-  {
-    name: 'general:fitness',
-    href: '#fitness',
-  },
+  // Fitness temporarily hidden while the Strava API is down
+  // {
+  //   name: 'general:fitness',
+  //   href: '#fitness',
+  // },
   {
     name: 'general:experience',
     href: '#experience',
