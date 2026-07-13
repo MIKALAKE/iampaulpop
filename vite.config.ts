@@ -1,15 +1,55 @@
-import { defineConfig } from 'vite';
+import path from 'path';
+import { mkdir, readFile, writeFile } from 'fs/promises';
+import { defineConfig, type Plugin, type ResolvedConfig } from 'vite';
 import { fileURLToPath, URL } from 'url';
 // @ts-expect-error - vite-plugin-eslint is not typed
 import viteEslint from 'vite-plugin-eslint';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react-swc';
 
-// Add ImportMeta type augmentation for 'url' property
+import { renderSeo } from './seo.config';
+
+/**
+ * Renders the static SEO block into index.html, then emits a second entry point
+ * at /en/index.html carrying the English tags. Social crawlers don't run JS, so
+ * each language needs its own URL with its own <head> — Helmet can't reach them.
+ */
+const seo = (): Plugin => {
+  let config: ResolvedConfig;
+
+  return {
+    name: 'seo-i18n',
+
+    configResolved(resolved) {
+      config = resolved;
+    },
+
+    // Injects the Romanian block — in dev and in the built index.html alike.
+    transformIndexHtml: html => html.replace('<!--seo-->', renderSeo('ro')),
+
+    async closeBundle() {
+      if (config.command !== 'build') return;
+
+      const outDir = path.resolve(config.root, config.build.outDir);
+      const romanian = await readFile(path.join(outDir, 'index.html'), 'utf-8');
+
+      const english = romanian
+        .replace(renderSeo('ro'), renderSeo('en'))
+        .replace('<html lang="ro">', '<html lang="en">');
+
+      if (english === romanian) {
+        throw new Error('seo-i18n: could not swap the Romanian SEO block for the English one');
+      }
+
+      await mkdir(path.join(outDir, 'en'), { recursive: true });
+      await writeFile(path.join(outDir, 'en', 'index.html'), english);
+    },
+  };
+};
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(), viteEslint()],
+  plugins: [react(), tailwindcss(), viteEslint(), seo()],
   server: {
     open: true, // automatically open the app in the browser
     port: 5176,
