@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from '@vercel/analytics/react';
 import { HelmetProvider } from 'react-helmet-async';
 
 import Navigator from 'Navigator';
