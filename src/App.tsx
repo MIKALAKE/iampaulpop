@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Analytics } from '@vercel/analytics/next';
 import { HelmetProvider } from 'react-helmet-async';
 
 import Navigator from 'Navigator';
@@ -39,6 +40,7 @@ const App = () => {
 
   return (
     <HelmetProvider>
+      <Analytics />
       <ThemeProvider defaultTheme='system' storageKey='paul-pop-ui-theme'>
         <div className='h-dvh w-screen'>
           <LanguageProvider>
