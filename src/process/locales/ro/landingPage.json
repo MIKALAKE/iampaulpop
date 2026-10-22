@@ -86,11 +86,37 @@
     "personalNote": "Pasionat de alergare, fan fotbal, geek de motorsport"
   },
   "projects": {
-    "vanillaCleaning": {
-      "description": "Un site de business construit cu accent pe SEO și design mobile-first. Dezvoltat pentru promovarea unei afaceri locale de curățenie din Cluj-Napoca."
+    "labels": {
+      "role": "Rol",
+      "year": "An",
+      "problem": "Problema",
+      "built": "Ce am construit",
+      "result": "Rezultat",
+      "visit": "Vezi site-ul"
     },
+    "screenshotAlt": "Pagina principală {{name}}",
     "invitatio": {
-      "description": "O platformă gratuită de organizare a nunții, pentru mirii care își planifică singuri evenimentul. Include checklist inteligent care se adaptează după data nunții, listă de invitați cu confirmări RSVP, plan de mese drag-and-drop, gestionarea furnizorilor și a bugetului, plus colaborare între parteneri pe același cont. Oferă și invitații digitale personalizate pentru nunți, botezuri, aniversări și logodne."
+      "summary": "Planificator de nuntă gratuit, în română, pentru mirii care își organizează singuri nunta.",
+      "role": "Produs, design, front-end și backend, singur",
+      "problem": "Mirii țin lista de invitați, bugetul și planul de mese în tabele separate și în mesaje trimise unul altuia. Am vrut un singur loc pentru toate, gratuit și gândit pentru nunțile din România.",
+      "built": [
+        "Cei doi parteneri lucrează pe aceleași date, din conturi separate, cu sincronizare live.",
+        "Un plan de mese drag-and-drop, cu mese rotunde și dreptunghiulare.",
+        "Pagini publice prerandate pentru Google, iar aplicația propriu-zisă e un SPA în spatele autentificării.",
+        "Backend propriu: API în Hono, cu Drizzle și PostgreSQL pe Neon, rulat serverless pe Vercel, plus un job zilnic și emailuri tranzacționale."
+      ],
+      "result": "E live pe invitatio.ro, gratuit pentru oricine, și îl întrețin singur, de la cod până la infrastructură."
+    },
+    "vanillaCleaning": {
+      "summary": "Site de prezentare pentru o spălătorie de covoare din Cluj-Napoca.",
+      "role": "Design, cod și SEO, singur",
+      "problem": "Firma trebuia să fie găsită pe Google de oamenii din Cluj care caută o spălătorie de covoare, nu doar de cei care aveau deja numărul de telefon.",
+      "built": [
+        "Site în React, cu pagini prerandate, ca motoarele de căutare să vadă conținutul complet.",
+        "Paginile și articolele de blog se pot edita din TinaCMS, fără să fie nevoie de mine pentru fiecare modificare.",
+        "Design gândit întâi pentru telefon, cu butoane de apel și WhatsApp mereu la îndemână."
+      ],
+      "result": "În ultimul an, aproximativ 40% din vizitatori au venit din căutarea Google."
     }
   },
   "skills": {

@@ -86,11 +86,37 @@
     "personalNote": "Running enthusiast, football fan, motorsport geek"
   },
   "projects": {
-    "vanillaCleaning": {
-      "description": "A business website built with a strong focus on SEO and mobile-first design. Developed to promote a local cleaning business in Cluj-Napoca."
+    "labels": {
+      "role": "Role",
+      "year": "Year",
+      "problem": "The problem",
+      "built": "What I built",
+      "result": "Result",
+      "visit": "Visit the site"
     },
+    "screenshotAlt": "{{name}} homepage",
     "invitatio": {
-      "description": "A free wedding planning platform for couples who organize their own wedding. Includes a smart checklist that adapts to the wedding date, guest list with RSVP tracking, drag-and-drop seating plan, vendor and budget management, and partner collaboration on a shared account. Also offers custom digital invitations for weddings, christenings, anniversaries and engagements."
+      "summary": "A free wedding planner in Romanian, for couples who organize their own wedding.",
+      "role": "Product, design, front-end and back-end, on my own",
+      "problem": "Couples keep the guest list, the budget and the seating plan in separate spreadsheets and in messages to each other. I wanted one place for all of it, free and built around Romanian weddings.",
+      "built": [
+        "Both partners work on the same data from separate accounts, with live sync.",
+        "A drag-and-drop seating plan with round and rectangular tables.",
+        "Public pages are prerendered for Google, while the planner itself is an SPA behind login.",
+        "My own back-end: a Hono API with Drizzle and PostgreSQL on Neon, running serverless on Vercel, plus a daily job and transactional emails."
+      ],
+      "result": "It's live at invitatio.ro, free for anyone, and I maintain it on my own, from the code to the infrastructure."
+    },
+    "vanillaCleaning": {
+      "summary": "A website for a carpet cleaning business in Cluj-Napoca.",
+      "role": "Design, code and SEO, on my own",
+      "problem": "The business needed to show up on Google for people in Cluj looking for carpet cleaning, not just for people who already had its phone number.",
+      "built": [
+        "A React site with prerendered pages, so search engines see the full content.",
+        "Pages and blog posts editable in TinaCMS, so content changes don't have to go through me.",
+        "A mobile-first design with call and WhatsApp buttons always within reach."
+      ],
+      "result": "Over the last year, about 40% of visitors came from Google search."
     }
   },
   "skills": {

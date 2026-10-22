@@ -1,76 +1,50 @@
 import { motion } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
 
 import I18n from 'Locales';
 import { track } from 'Helpers/analytics';
 import { SectionHeading } from 'Components';
+import invitatioShot from 'Assets/projects/invitatio.webp';
+import vanillaShot from 'Assets/projects/vanilla.webp';
 
 const projects = [
   {
-    title: 'Vanilla Cleaning',
-    description: 'landingPage:projects.vanillaCleaning.description',
-    url: 'https://vanilla-cleaning.ro',
-    order: 1,
-    tags: ['SEO', 'Mobile-first', 'Business Site'],
+    key: 'invitatio',
+    title: 'invitatio.ro',
+    url: 'https://invitatio.ro',
+    image: invitatioShot,
+    since: '2025',
+    ongoing: true,
+    tags: ['React', 'TypeScript', 'HeroUI', 'Hono', 'PostgreSQL'],
   },
   {
-    title: 'invitatio.ro',
-    description: 'landingPage:projects.invitatio.description',
-    url: 'https://invitatio.ro',
-    order: 2,
-    tags: ['Wedding Planner', 'Seating Plan'],
+    key: 'vanillaCleaning',
+    title: 'Vanilla Cleaning',
+    url: 'https://vanilla-cleaning.ro',
+    image: vanillaShot,
+    since: '2025',
+    ongoing: false,
+    tags: ['React', 'Tailwind CSS', 'TinaCMS', 'SEO'],
   },
 ];
 
-const trackProject = (project: (typeof projects)[number]) => {
-  track('project_click', { project_name: project.title, link_url: project.url });
+type Project = (typeof projects)[number];
+
+const t = (key: string, options?: Record<string, unknown>) =>
+  I18n.t(`landingPage:projects.${key}`, options);
+
+const trackProject = (project: Project, location: 'screenshot' | 'button') => {
+  track('project_click', { project_name: project.title, link_url: project.url, location });
 };
 
-const renderProject = (project: (typeof projects)[number], i: number) => {
-  const screenshotUrl = project.url
-    ? `https://api.microlink.io?url=${encodeURIComponent(project.url)}&screenshot=true&meta=false&embed=screenshot.url`
-    : null;
-
-  return (
-    <motion.a
-      key={i}
-      href={project.url}
-      target='_blank'
-      rel='noopener noreferrer'
-      onClick={trackProject.bind(null, project)}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: i * 0.1 }}
-      className='group bg-card border-border hover:border-primary/30 glow-accent block overflow-hidden rounded-md border transition-all duration-300'>
-      <div className='flex flex-col md:flex-row'>
-        <div className='flex-1 p-6'>
-          <div className='mb-3 flex items-start justify-between'>
-            <h3 className='text-foreground group-hover:text-primary text-lg font-semibold transition-colors'>
-              {project.title}
-              <span className='sr-only'> ({I18n.t('general:opensInNewTab')})</span>
-            </h3>
-          </div>
-
-          <p className='text-secondary-foreground mb-4 text-sm leading-relaxed'>
-            {I18n.t(project.description)}
-          </p>
-          <ul className='flex flex-wrap gap-2'>{project.tags.map(renderTag)}</ul>
-        </div>
-
-        {screenshotUrl && (
-          <div className='relative size-46 w-full shrink-0 overflow-hidden md:h-auto md:w-64'>
-            <img
-              src={screenshotUrl}
-              alt=''
-              className='absolute inset-0 h-full w-full scale-95 rotate-1 transform object-contain opacity-70 transition-all duration-500 group-hover:scale-100 group-hover:rotate-3 group-hover:opacity-70 md:opacity-0 md:group-hover:rotate-2 md:group-focus-visible:opacity-70'
-              loading='lazy'
-            />
-          </div>
-        )}
-      </div>
-    </motion.a>
-  );
-};
+const renderItem = (item: string) => (
+  <li key={item} className='text-secondary-foreground flex items-start gap-3 text-sm'>
+    <span aria-hidden className='text-primary mt-1 font-mono text-xs'>
+      ▹
+    </span>
+    {item}
+  </li>
+);
 
 const renderTag = (tag: string) => (
   <li
@@ -80,13 +54,101 @@ const renderTag = (tag: string) => (
   </li>
 );
 
+const renderProject = (project: Project, i: number) => {
+  const built = t(`${project.key}.built`, { returnObjects: true }) as unknown as string[];
+  const period = project.ongoing
+    ? `${project.since} — ${I18n.t('general:present')}`
+    : project.since;
+
+  return (
+    <motion.article
+      key={project.key}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: i * 0.1 }}
+      className='bg-card border-border grid overflow-hidden border lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)]'>
+      <a
+        href={project.url}
+        target='_blank'
+        rel='noopener noreferrer'
+        tabIndex={-1}
+        onClick={trackProject.bind(null, project, 'screenshot')}
+        className='group bg-secondary border-border block border-b lg:border-r lg:border-b-0'>
+        <img
+          src={project.image}
+          alt={t('screenshotAlt', { name: project.title })}
+          width={1200}
+          height={750}
+          loading='lazy'
+          className='aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02] lg:sticky lg:top-24'
+        />
+      </a>
+
+      <div className='flex flex-col gap-5 p-6'>
+        <div>
+          <h3 className='text-foreground mb-1 text-lg font-semibold'>{project.title}</h3>
+          <p className='text-secondary-foreground text-sm leading-relaxed'>
+            {t(`${project.key}.summary`)}
+          </p>
+        </div>
+
+        <dl className='grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 font-mono text-xs'>
+          <dt className='text-muted-foreground'>{t('labels.role')}</dt>
+          <dd className='text-foreground'>{t(`${project.key}.role`)}</dd>
+          <dt className='text-muted-foreground'>{t('labels.year')}</dt>
+          <dd className='text-foreground'>{period}</dd>
+        </dl>
+
+        <div>
+          <h4 className='text-primary mb-2 font-mono text-xs tracking-wider uppercase'>
+            {t('labels.problem')}
+          </h4>
+          <p className='text-secondary-foreground text-sm leading-relaxed'>
+            {t(`${project.key}.problem`)}
+          </p>
+        </div>
+
+        <div>
+          <h4 className='text-primary mb-2 font-mono text-xs tracking-wider uppercase'>
+            {t('labels.built')}
+          </h4>
+          <ul className='space-y-2'>{built.map(renderItem)}</ul>
+        </div>
+
+        <div>
+          <h4 className='text-primary mb-2 font-mono text-xs tracking-wider uppercase'>
+            {t('labels.result')}
+          </h4>
+          <p className='text-foreground text-sm leading-relaxed'>{t(`${project.key}.result`)}</p>
+        </div>
+
+        <ul className='flex flex-wrap gap-2'>{project.tags.map(renderTag)}</ul>
+
+        <a
+          href={project.url}
+          target='_blank'
+          rel='noopener noreferrer'
+          onClick={trackProject.bind(null, project, 'button')}
+          className='border-primary text-primary hover:bg-primary hover:text-primary-foreground flex w-fit items-center gap-2 border px-4 py-2 font-mono text-xs transition-colors sm:text-sm'>
+          {t('labels.visit')}
+          <ArrowUpRight aria-hidden className='size-4' />
+          <span className='sr-only'>
+            {project.title} ({I18n.t('general:opensInNewTab')})
+          </span>
+        </a>
+      </div>
+    </motion.article>
+  );
+};
+
 const Projects = () => {
   return (
     <section id='projects' className='w-full py-20'>
       <div className='container mx-auto max-w-5xl'>
         {/* index shifted 06→05 while Fitness is hidden; restore to 06 when Fitness returns */}
         <SectionHeading index='05' title={I18n.t('general:projects')} />
-        <div className='mt-10 space-y-8'>{projects.map(renderProject)}</div>
+        <div className='mt-10 space-y-10'>{projects.map(renderProject)}</div>
       </div>
     </section>
   );
