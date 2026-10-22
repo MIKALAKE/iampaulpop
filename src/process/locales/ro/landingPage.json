@@ -95,9 +95,9 @@
   },
   "skills": {
     "categories": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "tools": "Unelte"
+      "daily": "Zilnic",
+      "production": "Folosite în producție",
+      "platforms": "Platforme și design"
     }
   },
   "fitness": {

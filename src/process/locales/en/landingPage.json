@@ -95,9 +95,9 @@
   },
   "skills": {
     "categories": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "tools": "Tools"
+      "daily": "Every day",
+      "production": "Used in production",
+      "platforms": "Platforms & design"
     }
   },
   "fitness": {
