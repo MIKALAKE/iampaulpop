@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import I18n from 'Locales';
+import { track } from 'Helpers/analytics';
 import IconButton from 'Components/IconButton';
 import ThemeSwitcher from 'Components/ThemeSwitcher';
 import LanguageSelector from 'Components/LanguageSelector';
@@ -14,9 +15,11 @@ const renderTopBarItem = (
 ) => (
   <a
     key={item.name}
-    aria-label={item.name}
     href={item.href}
-    onClick={setOpen.bind(null, false)}
+    onClick={() => {
+      track('nav_click', { section: item.href.slice(1), menu: 'mobile' });
+      setOpen(false);
+    }}
     className='hover:text-primary underline-offset-2 hover:underline'>
     {I18n.t(item.name)}
   </a>
@@ -28,7 +31,11 @@ const MobileMenu = () => {
   return (
     <Sheet open={open} onOpenChange={setOpen.bind(null, !open)}>
       <SheetTrigger asChild onClick={setOpen.bind(null, true)}>
-        <IconButton iconName='menu' className='dark:text-white' />
+        <IconButton
+          iconName='menu'
+          aria-label={I18n.t('general:openMenu')}
+          className='dark:text-white'
+        />
       </SheetTrigger>
       <SheetContent className='data-[side=bottom]:max-h-[50vh] data-[side=top]:max-h-[50vh]'>
         <SheetHeader>

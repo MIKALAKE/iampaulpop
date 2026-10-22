@@ -1,4 +1,5 @@
 import I18n from 'Locales';
+import { track } from 'Helpers/analytics';
 import LanguageSelector from 'Components/LanguageSelector';
 
 import MobileMenu from './MobileMenu';
@@ -8,15 +9,15 @@ import ThemeSwitcher from 'Components/ThemeSwitcher';
 const renderTopBarItem = (item: { name: string; href: string }) => (
   <a
     key={item.name}
-    aria-label={item.name}
     href={item.href}
+    onClick={() => track('nav_click', { section: item.href.slice(1), menu: 'desktop' })}
     className='cursor-pointer rounded-full px-5 py-2 transition-all duration-100 ease-in-out hover:bg-white/10 hover:shadow-sm dark:text-white dark:shadow-white/10 dark:hover:bg-white/15 dark:hover:shadow-md'>
     {I18n.t(item.name)}
   </a>
 );
 
 const TopBar = () => (
-  <section className='fixed top-0 z-50 my-2 w-full px-2'>
+  <header className='fixed top-0 z-50 my-2 w-full px-2'>
     <div className='bg-background/20 mx-auto w-full rounded-full py-1 shadow-md backdrop-blur-md transition-all duration-150 lg:max-w-5xl dark:bg-white/10'>
       <nav className='flex h-12 w-full items-center justify-between rounded-full px-5 text-sm text-black select-none'>
         <a
@@ -41,7 +42,7 @@ const TopBar = () => (
         </div>
       </nav>
     </div>
-  </section>
+  </header>
 );
 
 export default TopBar;

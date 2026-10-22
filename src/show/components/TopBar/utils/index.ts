@@ -13,6 +13,10 @@ export const MENU_ITEMS = [
     href: '#experience',
   },
   {
+    name: 'general:demo',
+    href: '#demo',
+  },
+  {
     name: 'general:skills',
     href: '#skills',
   },

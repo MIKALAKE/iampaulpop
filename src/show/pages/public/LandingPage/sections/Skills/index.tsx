@@ -13,18 +13,39 @@ const skillsData = [
       'JavaScript',
       'TypeScript',
       'Redux',
+      'TanStack',
       'TailwindCSS',
       'Storybook',
       'Shadcn',
+      'HeroUI',
+      'RadixUI',
+      'Zod',
       'Motion',
       'ReactRouter',
       'CSS',
     ],
   },
   {
+    key: 'backend' as const,
+    labelKey: 'landingPage:skills.categories.backend',
+    skills: ['NodeJS', 'Hono', 'PostgreSQL', 'Drizzle', 'Neon'],
+  },
+  {
     key: 'tool' as const,
     labelKey: 'landingPage:skills.categories.tools',
-    skills: ['Git', 'GitHub', 'GitLab', 'Figma', 'Netlify', 'Vercel', 'Vite', 'VSCode', 'Yarn'],
+    skills: [
+      'Git',
+      'GitHub',
+      'GitLab',
+      'Figma',
+      'Netlify',
+      'Vercel',
+      'Cloudflare',
+      'Vite',
+      'Vitest',
+      'VSCode',
+      'Yarn',
+    ],
   },
 ];
 
@@ -54,7 +75,7 @@ const renderSkill = (skill: string, i: number) => {
       viewport={{ once: true }}
       transition={{ delay: i * 0.09 }}
       className='bg-secondary text-secondary-foreground border-border hover:border-primary/50 text-md flex items-center rounded-sm border px-3 py-1.5 font-mono transition-colors'>
-      <img src={logoSrc} alt={`${skill} logo`} className='mr-2 h-8 w-8' />
+      <img src={logoSrc} alt='' className='mr-2 h-8 w-8' />
 
       {skill}
     </motion.span>
@@ -64,8 +85,8 @@ const renderSkill = (skill: string, i: number) => {
 const Skills = () => (
   <section id='skills' className='w-full py-24'>
     <div className='container mx-auto max-w-5xl'>
-      {/* index shifted 04→03 while Fitness is hidden; restore to 04 when Fitness returns */}
-      <SectionHeading index='03' title={I18n.t('general:skills')} />
+      {/* index shifted 05→04 while Fitness is hidden; restore to 05 when Fitness returns */}
+      <SectionHeading index='04' title={I18n.t('general:skills')} />
 
       <div className='mt-10 grid gap-8 md:grid-cols-1'>{skillsData.map(renderCategory)}</div>
     </div>

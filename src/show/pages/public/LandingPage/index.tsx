@@ -1,11 +1,17 @@
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 import I18n from 'Locales';
+import { trackSections } from 'Helpers/analytics';
 
 // NOTE: Fitness temporarily hidden while the Strava API is down
-import { AboutMe, CV, Experience, Hero, Projects, Skills } from './sections';
+import { AboutMe, CV, Experience, Hero, MapDemo, Projects, Skills } from './sections';
+
+const SECTIONS = ['hero', 'about', 'experience', 'demo', 'skills', 'projects', 'cv'];
 
 const LandingPage = () => {
+  useEffect(() => trackSections(SECTIONS), []);
+
   return (
     <>
       <Helmet>
@@ -22,6 +28,8 @@ const LandingPage = () => {
         {/* <Fitness /> */}
 
         <Experience />
+
+        <MapDemo />
 
         <Skills />
 

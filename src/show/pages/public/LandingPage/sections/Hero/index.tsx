@@ -1,9 +1,13 @@
 import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 
 import I18n from 'Locales';
+import { track } from 'Helpers/analytics';
 
 const Hero = () => (
-  <div className='container mx-auto flex h-dvh w-full flex-col items-start justify-center px-4'>
+  <div
+    id='hero'
+    className='container mx-auto flex h-dvh w-full flex-col items-start justify-center px-4'>
     <motion.p
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -20,13 +24,13 @@ const Hero = () => (
       Paul Pop
     </motion.h1>
 
-    <motion.h2
+    <motion.p
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4 }}
       className='text-muted-foreground mb-4 text-xl font-bold sm:text-3xl md:text-5xl'>
       {I18n.t('landingPage:hero.description')}
-    </motion.h2>
+    </motion.p>
 
     <motion.p
       initial={{ opacity: 0, y: 20 }}
@@ -43,14 +47,17 @@ const Hero = () => (
       className='flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:gap-4'>
       <a
         href='#projects'
+        onClick={() => track('cta_click', { cta: 'view_my_work' })}
         className='border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-sm border px-4 py-2.5 text-center font-mono text-xs transition-colors duration-200 sm:text-sm'>
         {I18n.t('general:viewMyWork')}
       </a>
 
       <a
         href='mailto:paulpop122@gmail.com'
+        onClick={() => track('contact_click', { method: 'email', location: 'hero' })}
         className='text-muted-foreground hover:text-primary rounded-sm px-4 py-2.5 text-center font-mono text-xs transition-colors duration-200 sm:text-sm'>
-        {I18n.t('general:getInTouch')} {'->'}
+        {I18n.t('general:getInTouch')}
+        <ArrowRight aria-hidden className='ml-2 inline size-4' />
       </a>
     </motion.div>
   </div>

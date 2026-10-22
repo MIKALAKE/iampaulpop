@@ -1,8 +1,8 @@
 {
   "about": {
-    "description": "Sunt un dezvoltator front-end pasionat, specializat în React, TypeScript și Tailwind CSS. Cu peste 3 ani de experiență profesională, construiesc interfețe responsive și intuitive, cu focus pe performanță și cod curat. Cred că software-ul excelent e invizibil — pur și simplu funcționează.",
+    "description": "Sunt un dezvoltator front-end pasionat, specializat în React, TypeScript și Tailwind CSS. Cu peste {{years}} ani de experiență profesională, construiesc interfețe responsive și intuitive, cu focus pe performanță și cod curat. Cred că software-ul excelent e invizibil — pur și simplu funcționează.",
     "highlight": {
-      "frontend": "3+ ani de dezvoltare profesională în React",
+      "frontend": "{{years}}+ ani de dezvoltare profesională în React",
       "backend": "Focus puternic pe performanță și UX",
       "mobile": "Experiență cu PWA-uri și design mobile-first",
       "cloud": "Jucător de echipă colaborativ, cu expertiză în code review",
@@ -10,7 +10,6 @@
       "opensource": "Contributor activ la proiecte open-source"
     }
   },
-
   "experience": {
     "frontendDeveloper": "Dezvoltator Web Front-End",
     "qaAnalyst": "Analist QA",
@@ -31,35 +30,68 @@
       "gainedQAUnderstanding": "Dobândesc o înțelegere profundă a metodologiilor și pipeline-urilor QA"
     }
   },
-
+  "mapDemo": {
+    "badge": "DEMO",
+    "title": "Servicii publice în Maramureș",
+    "intro": "Sunt din Maramureș, așa că pentru acest demo am ales județul meu. E o hartă interactivă a instituțiilor publice, genul de interfață GIS pe care o construiesc zilnic pentru sectorul public: filtre, căutare, listă sincronizată cu harta și calculul celei mai apropiate instituții, cu ruta până la ea.",
+    "disclaimer": "Mic demo construit pentru acest portofoliu, cu date publice din OpenStreetMap. Nu e un produs real și nu folosește nimic din proiectele la care lucrez; unele instituții pot lipsi sau pot avea date incomplete.",
+    "hint": "Dă click oriunde pe hartă sau folosește locația ta ca să afli care e cea mai apropiată instituție.",
+    "nearest": "Cea mai apropiată",
+    "byCar": "cu mașina",
+    "straightLine": "în linie dreaptă (serviciul de rute nu a răspuns)",
+    "routing": "Se calculează ruta…",
+    "useMyLocation": "Folosește locația mea",
+    "clearPoint": "Șterge punctul",
+    "outsideCounty": "Locația ta e în afara Maramureșului. Alege un punct direct pe hartă.",
+    "locationDenied": "Nu am putut afla locația. Alege un punct direct pe hartă.",
+    "filters": "Categorii",
+    "search": "Caută după nume sau localitate",
+    "results": "{{count}} rezultate",
+    "noResults": "Nicio instituție nu corespunde filtrelor.",
+    "loading": "Se încarcă harta…",
+    "source": "Date © contribuitorii OpenStreetMap · Rute: OSRM · Hartă: CARTO",
+    "categories": {
+      "admin": "Primării și administrație",
+      "health": "Sănătate",
+      "pharmacy": "Farmacii",
+      "safety": "Poliție și pompieri",
+      "post": "Poștă",
+      "education": "Școli și biblioteci"
+    },
+    "unnamed": {
+      "admin": "Instituție publică",
+      "health": "Unitate medicală",
+      "pharmacy": "Farmacie",
+      "safety": "Unitate de intervenție",
+      "post": "Oficiu poștal",
+      "education": "Școală"
+    }
+  },
   "cv": {
     "description": "Un rezumat al experienței și abilităților mele. Descarcă versiunea completă mai jos.",
     "download": "Descarcă CV"
   },
-
   "hero": {
     "description": "Dev front-end care transformă cafeaua în componente React",
     "greeting": "Salut, sunt",
     "headline": "Construiesc interfețe curate și performante, pe care utilizatorii le adoră.",
     "personalNote": "Pasionat de alergare, fan fotbal, geek de motorsport"
   },
-
   "projects": {
     "vanillaCleaning": {
       "description": "Un site de business construit cu accent pe SEO și design mobile-first. Dezvoltat pentru promovarea unei afaceri locale de curățenie din Cluj-Napoca."
     },
     "invitatio": {
-      "description": "O platformă completă de invitații digitale pentru evenimente, creată pentru afaceri care doresc să creeze invitații impresionante pentru momentele speciale. Include managementul RSVP, cronometru, muzică de fundal, navigare către eveniment și opțiuni extinse de personalizare pentru a se potrivi perfect stilului oricărui eveniment."
+      "description": "O platformă gratuită de organizare a nunții, pentru mirii care își planifică singuri evenimentul. Include checklist inteligent care se adaptează după data nunții, listă de invitați cu confirmări RSVP, plan de mese drag-and-drop, gestionarea furnizorilor și a bugetului, plus colaborare între parteneri pe același cont. Oferă și invitații digitale personalizate pentru nunți, botezuri, aniversări și logodne."
     }
   },
-
   "skills": {
     "categories": {
       "frontend": "Frontend",
+      "backend": "Backend",
       "tools": "Unelte"
     }
   },
-
   "fitness": {
     "description": "Când nu programez, mă găsești făcând sport. Iată o privire în călătoria mea de fitness prin cele mai recente activități Strava.",
     "stats": {

@@ -33,7 +33,11 @@ const LanguageSelector = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <IconButton iconName='globe' className='dark:text-white' />
+        <IconButton
+          iconName='globe'
+          aria-label={I18n.t('general:changeLanguage')}
+          className='dark:text-white'
+        />
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end'>
         <DropdownMenuGroup>

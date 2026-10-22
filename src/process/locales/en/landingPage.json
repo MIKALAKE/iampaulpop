@@ -1,8 +1,8 @@
 {
   "about": {
-    "description": "I'm a passionate front-end developer specializing in React, TypeScript, and Tailwind CSS. With 3+ years of professional experience, I craft responsive, user-friendly interfaces with a strong focus on performance and clean code. I believe great software is invisible — it just works.",
+    "description": "I'm a passionate front-end developer specializing in React, TypeScript, and Tailwind CSS. With {{years}}+ years of professional experience, I craft responsive, user-friendly interfaces with a strong focus on performance and clean code. I believe great software is invisible — it just works.",
     "highlight": {
-      "frontend": "3+ years of professional React development",
+      "frontend": "{{years}}+ years of professional React development",
       "backend": "Strong focus on performance and UX",
       "mobile": "Experience with PWAs and mobile-first design",
       "cloud": "Collaborative team player with code review expertise",
@@ -10,7 +10,6 @@
       "opensource": "Active contributor to open-source projects"
     }
   },
-
   "experience": {
     "frontendDeveloper": "Frontend Web Developer",
     "qaAnalyst": "QA Analyst",
@@ -31,35 +30,68 @@
       "gainedQAUnderstanding": "Gaining deep understanding of QA methodologies and pipelines"
     }
   },
-
+  "mapDemo": {
+    "badge": "DEMO",
+    "title": "Public services in Maramureș",
+    "intro": "I'm from Maramureș, so I picked my home county for this demo. It's an interactive map of public institutions, the kind of GIS interface I build every day for the public sector: filters, search, a list kept in sync with the map, and the nearest institution with a route to it.",
+    "disclaimer": "A small demo built for this portfolio with public OpenStreetMap data. It isn't a real product and uses nothing from the projects I work on; some institutions may be missing or incomplete.",
+    "hint": "Click anywhere on the map or use your location to find the nearest institution.",
+    "nearest": "Nearest",
+    "byCar": "by car",
+    "straightLine": "in a straight line (the routing service didn't answer)",
+    "routing": "Calculating the route…",
+    "useMyLocation": "Use my location",
+    "clearPoint": "Clear point",
+    "outsideCounty": "You're outside Maramureș. Pick a point on the map instead.",
+    "locationDenied": "Couldn't get your location. Pick a point on the map instead.",
+    "filters": "Categories",
+    "search": "Search by name or town",
+    "results": "{{count}} results",
+    "noResults": "No institution matches these filters.",
+    "loading": "Loading the map…",
+    "source": "Data © OpenStreetMap contributors · Routes: OSRM · Map: CARTO",
+    "categories": {
+      "admin": "Town halls & administration",
+      "health": "Health",
+      "pharmacy": "Pharmacies",
+      "safety": "Police & fire",
+      "post": "Post offices",
+      "education": "Schools & libraries"
+    },
+    "unnamed": {
+      "admin": "Public institution",
+      "health": "Medical unit",
+      "pharmacy": "Pharmacy",
+      "safety": "Emergency unit",
+      "post": "Post office",
+      "education": "School"
+    }
+  },
   "cv": {
     "description": "A snapshot of my experience and skills. Grab the full version below.",
     "download": "Download CV"
   },
-
   "hero": {
     "description": "Front-end dev who turns coffee into React components",
     "greeting": "Hi, I'm",
     "headline": "Building clean, performant interfaces that users love.",
     "personalNote": "Running enthusiast, football fan, motorsport geek"
   },
-
   "projects": {
     "vanillaCleaning": {
       "description": "A business website built with a strong focus on SEO and mobile-first design. Developed to promote a local cleaning business in Cluj-Napoca."
     },
     "invitatio": {
-      "description": "A comprehensive event invitation platform designed for businesses to create stunning digital invitations for special moments. Features include RSVP management, countdown timers, background music, event navigation, and extensive customization options to perfectly match any event's unique style and requirements."
+      "description": "A free wedding planning platform for couples who organize their own wedding. Includes a smart checklist that adapts to the wedding date, guest list with RSVP tracking, drag-and-drop seating plan, vendor and budget management, and partner collaboration on a shared account. Also offers custom digital invitations for weddings, christenings, anniversaries and engagements."
     }
   },
-
   "skills": {
     "categories": {
       "frontend": "Frontend",
+      "backend": "Backend",
       "tools": "Tools"
     }
   },
-
   "fitness": {
     "description": "When I'm not coding, you'll find me staying active. Here's a glimpse into my fitness journey through my latest Strava activities.",
     "stats": {

@@ -2,6 +2,7 @@ import dayjs from 'dayjs';
 import { motion } from 'framer-motion';
 
 import I18n from 'Locales';
+import { track } from 'Helpers/analytics';
 import * as Logos from 'Assets/Logos';
 
 const socialLinks = [
@@ -24,8 +25,9 @@ const renderSocialLink = (link: (typeof socialLinks)[number]) => {
       href={link.url}
       target='_blank'
       rel='noopener noreferrer'
+      onClick={() => track('social_click', { network: link.name, location: 'footer' })}
       className='text-primary group flex items-center text-sm transition-all duration-300 hover:underline'>
-      <img src={logoSrc} alt={`${link} logo`} className='mr-2 h-4 w-4' />
+      <img src={logoSrc} alt='' className='mr-2 h-4 w-4' />
 
       <p>{link.name}</p>
     </a>

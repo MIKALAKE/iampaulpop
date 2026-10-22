@@ -11,6 +11,8 @@ import ro from './ro';
 // rendered language would leave the page contradicting its own <head>.
 const initialLanguage = window.location.pathname.startsWith('/en') ? 'en' : DEFAULT_LANGUAGE;
 
+document.documentElement.lang = initialLanguage;
+
 I18n.init({
   fallbackLng: DEFAULT_LANGUAGE,
   lng: initialLanguage,

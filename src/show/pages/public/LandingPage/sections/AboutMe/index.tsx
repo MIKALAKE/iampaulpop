@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 
 import I18n from 'Locales';
 import { SectionHeading } from 'Components';
+import { CAREER_START_DATE } from 'Constants';
+import { getYearsOfExperience } from 'Helpers';
 
 const highlights = [
   'landingPage:about.highlight.frontend',
@@ -11,10 +13,12 @@ const highlights = [
   'landingPage:about.highlight.leadership',
 ];
 
+const years = getYearsOfExperience(CAREER_START_DATE);
+
 const renderHighlight = (item: string, i: any) => (
   <li key={i} className='text-foreground flex items-start gap-3'>
     <span className='text-primary mt-1 font-mono text-sm'>▹</span>
-    <span className='text-secondary-foreground'>{I18n.t(item)}</span>
+    <span className='text-secondary-foreground'>{I18n.t(item, { years })}</span>
   </li>
 );
 
@@ -30,7 +34,7 @@ const AboutMe = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}>
             <p className='text-muted-foreground mb-6 leading-relaxed'>
-              {I18n.t('landingPage:about.description')}
+              {I18n.t('landingPage:about.description', { years })}
             </p>
           </motion.div>
           <motion.div
