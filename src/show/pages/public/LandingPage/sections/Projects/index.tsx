@@ -74,10 +74,8 @@ const renderProject = (project: Project, i: number) => {
       viewport={{ once: true }}
       transition={{ delay: i * 0.1 }}
       className='bg-card border-border grid overflow-hidden border lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]'>
-      <div className='bg-secondary border-border flex items-start justify-center border-b p-6 lg:border-r lg:border-b-0'>
-        <div className='w-full lg:sticky lg:top-24'>
-          <ProjectVideo src={project.video} poster={project.poster} title={project.title} />
-        </div>
+      <div className='bg-secondary border-border border-b lg:border-r lg:border-b-0'>
+        <ProjectVideo src={project.video} poster={project.poster} title={project.title} />
       </div>
 
       <div className='flex flex-col gap-5 p-6'>

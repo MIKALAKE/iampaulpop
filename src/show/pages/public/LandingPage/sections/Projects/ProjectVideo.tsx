@@ -49,7 +49,7 @@ const ProjectVideo = ({ src, poster, title }: ProjectVideoProps) => {
   };
 
   return (
-    <div className='relative mx-auto w-full max-w-[240px] sm:max-w-[300px]'>
+    <div className='relative h-full w-full'>
       <video
         ref={videoRef}
         src={src}
@@ -59,7 +59,7 @@ const ProjectVideo = ({ src, poster, title }: ProjectVideoProps) => {
         playsInline
         preload='none'
         aria-label={I18n.t('landingPage:projects.videoLabel', { name: title })}
-        className='aspect-[9/16] w-full rounded-xl object-cover shadow-lg'
+        className='aspect-[9/16] h-full w-full object-cover lg:aspect-auto'
       />
 
       <button
