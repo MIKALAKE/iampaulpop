@@ -1,33 +1,37 @@
 {
   "about": {
-    "description": "I'm a passionate front-end developer specializing in React, TypeScript, and Tailwind CSS. With {{years}}+ years of professional experience, I craft responsive, user-friendly interfaces with a strong focus on performance and clean code. I believe great software is invisible — it just works.",
+    "description": "I'm a front-end developer, and I've been working with React and TypeScript for {{years}}+ years. At Fida Solutions I build applications for public institutions: interactive maps, multi-step forms and interfaces that have to work for everyone. I like to understand the problem before I write any code, and to leave behind a codebase the next person on the team can read easily.",
     "highlight": {
-      "frontend": "{{years}}+ years of professional React development",
-      "backend": "Strong focus on performance and UX",
-      "mobile": "Experience with PWAs and mobile-first design",
-      "cloud": "Collaborative team player with code review expertise",
-      "leadership": "Team leadership and mentoring experience",
-      "opensource": "Active contributor to open-source projects"
+      "years": "{{years}}+ years of React and TypeScript in production",
+      "gis": "Maps and geographic data in web apps (GIS)",
+      "ownership": "I own the whole front-end at Fida: architecture, shared components, standards",
+      "mentoring": "Mentored two junior developers and brought new practices to the team",
+      "accessibility": "Accessible interfaces built for public sector requirements"
     }
   },
   "experience": {
     "frontendDeveloper": "Frontend Web Developer",
     "qaAnalyst": "QA Analyst",
     "achievements": {
-      "builtGISPlatforms": "Building modern, scalable GIS platforms and digital solutions for Romanian state institutions",
-      "developedPublicSectorApps": "Developing robust web applications for public sector with real-world impact",
-      "specializedFrontendArchitectures": "Specializing in developing robust front-end architectures with modern React patterns",
-      "managedReduxState": "Managing complex application state using Redux Toolkit for scalable state management",
-      "craftedAccessibleUI": "Crafting clean, responsive, and accessible user interfaces using Tailwind CSS and shadcn/ui",
-      "deliveredHighPerformanceUX": "Delivering excellent UI/UX and high-performance user experiences focused on quality and usability",
-      "builtResponsiveUI": "Building responsive UI components with React, TypeScript, and Tailwind CSS",
-      "managedComplexState": "Managing complex application state using Redux Toolkit",
-      "optimizedPerformance": "Optimizing performance for fast page loads and smooth interactions",
-      "collaboratedWithDesigners": "Collaborating closely with designers to deliver pixel-perfect interfaces",
-      "conductedCodeReviews": "Conducting thorough code reviews to maintain high code quality",
-      "identifiedBugs": "Identifying, reproducing, and documenting bugs across development stages",
-      "collaboratedCrossFunctional": "Collaborating with cross-functional teams for consistent quality",
-      "gainedQAUnderstanding": "Gaining deep understanding of QA methodologies and pipelines"
+      "fida": {
+        "gis": "Build GIS platforms for Romanian public institutions: interactive maps, data layers and filters.",
+        "forms": "Develop multi-step forms and flows that citizens and civil servants rely on to submit and process requests.",
+        "ownership": "Took over the whole front-end: app architecture, shared components and state management with Redux Toolkit.",
+        "accessibility": "Follow the public sector's accessibility requirements so the apps work for everyone.",
+        "mentoring": "Mentored two junior developers and shared what I had learned on earlier projects with the rest of the team."
+      },
+      "luminos": {
+        "foundations": "Built my foundations in React, TypeScript and Tailwind CSS on real client projects.",
+        "components": "Built responsive UI components and worked with complex state in Redux Toolkit.",
+        "design": "Worked directly with designers and turned their mockups into working interfaces.",
+        "reviews": "Took part in code reviews, both as an author and as a reviewer.",
+        "independence": "Learned to work independently: planning my own work and taking a task from requirements to production."
+      },
+      "quantic": {
+        "testing": "Tested web applications and reported clear bugs with exact reproduction steps.",
+        "collaboration": "Checked features with developers and product managers before each release.",
+        "detail": "Where my eye for detail and edge cases comes from."
+      }
     }
   },
   "mapDemo": {

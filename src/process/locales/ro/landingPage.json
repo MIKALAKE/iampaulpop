@@ -1,33 +1,37 @@
 {
   "about": {
-    "description": "Sunt un dezvoltator front-end pasionat, specializat în React, TypeScript și Tailwind CSS. Cu peste {{years}} ani de experiență profesională, construiesc interfețe responsive și intuitive, cu focus pe performanță și cod curat. Cred că software-ul excelent e invizibil — pur și simplu funcționează.",
+    "description": "Sunt dezvoltator front-end și lucrez cu React și TypeScript de peste {{years}} ani. La Fida Solutions construiesc aplicații pentru instituții publice: hărți interactive, formulare cu mai mulți pași și interfețe care trebuie să funcționeze pentru oricine. Îmi place să înțeleg problema înainte să scriu cod și să las în urmă un proiect pe care următorul coleg îl poate citi ușor.",
     "highlight": {
-      "frontend": "{{years}}+ ani de dezvoltare profesională în React",
-      "backend": "Focus puternic pe performanță și UX",
-      "mobile": "Experiență cu PWA-uri și design mobile-first",
-      "cloud": "Jucător de echipă colaborativ, cu expertiză în code review",
-      "leadership": "Experiență în leadership și mentorat de echipă",
-      "opensource": "Contributor activ la proiecte open-source"
+      "years": "{{years}}+ ani cu React și TypeScript, în producție",
+      "gis": "Hărți și date geografice în aplicații web (GIS)",
+      "ownership": "Responsabil de tot front-end-ul la Fida: arhitectură, componente comune, standarde",
+      "mentoring": "Am îndrumat doi colegi juniori și am adus practici noi în echipă",
+      "accessibility": "Interfețe accesibile, construite pentru cerințele din sectorul public"
     }
   },
   "experience": {
     "frontendDeveloper": "Dezvoltator Web Front-End",
     "qaAnalyst": "Analist QA",
     "achievements": {
-      "builtGISPlatforms": "Construiesc platforme GIS moderne și scalabile, precum și soluții digitale pentru instituții de stat din România",
-      "developedPublicSectorApps": "Dezvolt aplicații web robuste pentru sectorul public, cu impact real în viața utilizatorilor",
-      "specializedFrontendArchitectures": "Specializat în dezvoltarea de arhitecturi front-end robuste, folosind pattern-uri moderne React",
-      "managedReduxState": "Gestionez stări complexe ale aplicațiilor folosind Redux Toolkit pentru un management scalabil al stării",
-      "craftedAccessibleUI": "Creez interfețe curate, responsive și accesibile folosind Tailwind CSS și shadcn/ui",
-      "deliveredHighPerformanceUX": "Livrez experiențe UI/UX excelente și de înaltă performanță, cu focus pe calitate și utilizabilitate",
-      "builtResponsiveUI": "Construiesc componente UI responsive cu React, TypeScript și Tailwind CSS",
-      "managedComplexState": "Gestionez stări complexe ale aplicațiilor folosind Redux Toolkit",
-      "optimizedPerformance": "Optimizez performanța pentru încărcări rapide și interacțiuni fluide",
-      "collaboratedWithDesigners": "Colaborez strâns cu designerii pentru a livra interfețe pixel-perfect",
-      "conductedCodeReviews": "Realizez code review-uri riguroase pentru menținerea unui cod de calitate înaltă",
-      "identifiedBugs": "Identific, reproduc și documentez bug-uri pe parcursul etapelor de dezvoltare",
-      "collaboratedCrossFunctional": "Colaborez cu echipe cross-funcționale pentru o calitate constantă a produsului",
-      "gainedQAUnderstanding": "Dobândesc o înțelegere profundă a metodologiilor și pipeline-urilor QA"
+      "fida": {
+        "gis": "Construiesc platforme GIS pentru instituții publice din România: hărți interactive, straturi de date și filtre.",
+        "forms": "Dezvolt formulare și fluxuri cu mai mulți pași, prin care cetățenii și funcționarii depun și procesează cereri.",
+        "ownership": "Am preluat întreaga parte de front-end: arhitectura aplicațiilor, componentele comune și starea gestionată cu Redux Toolkit.",
+        "accessibility": "Țin cont de cerințele de accesibilitate din sectorul public, ca aplicațiile să poată fi folosite de oricine.",
+        "mentoring": "Am îndrumat doi colegi juniori și am împărtășit cu restul echipei ce am învățat în proiectele anterioare."
+      },
+      "luminos": {
+        "foundations": "Aici mi-am pus bazele în React, TypeScript și Tailwind CSS, lucrând pe proiecte reale pentru clienți.",
+        "components": "Am construit componente UI responsive și am lucrat cu stare complexă în Redux Toolkit.",
+        "design": "Am lucrat direct cu designerii și am transformat machetele în interfețe funcționale.",
+        "reviews": "Am participat la code review-uri, atât ca autor, cât și ca reviewer.",
+        "independence": "Am învățat să lucrez independent: să-mi organizez munca și să duc un task de la cerință până în producție."
+      },
+      "quantic": {
+        "testing": "Am testat aplicații web și am raportat bug-uri clare, cu pașii exacți de reproducere.",
+        "collaboration": "Am verificat funcționalitățile împreună cu dezvoltatorii și product managerii înainte de fiecare release.",
+        "detail": "De aici vine atenția mea pentru detalii și pentru cazurile limită."
+      }
     }
   },
   "mapDemo": {

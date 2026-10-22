@@ -6,11 +6,11 @@ import { CAREER_START_DATE } from 'Constants';
 import { getYearsOfExperience } from 'Helpers';
 
 const highlights = [
-  'landingPage:about.highlight.frontend',
-  'landingPage:about.highlight.backend',
-  'landingPage:about.highlight.mobile',
-  'landingPage:about.highlight.cloud',
-  'landingPage:about.highlight.leadership',
+  'landingPage:about.highlight.years',
+  'landingPage:about.highlight.gis',
+  'landingPage:about.highlight.ownership',
+  'landingPage:about.highlight.mentoring',
+  'landingPage:about.highlight.accessibility',
 ];
 
 const years = getYearsOfExperience(CAREER_START_DATE);
