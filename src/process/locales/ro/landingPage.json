@@ -33,7 +33,7 @@
   "mapDemo": {
     "badge": "DEMO",
     "title": "Servicii publice în Maramureș",
-    "intro": "Sunt din Maramureș, așa că pentru acest demo am ales județul meu. E o hartă interactivă a instituțiilor publice, genul de interfață GIS pe care o construiesc zilnic pentru sectorul public: filtre, căutare, listă sincronizată cu harta și calculul celei mai apropiate instituții, cu ruta până la ea.",
+    "intro": "Am crescut în Maramureș, așa că pentru acest demo am ales județul în care m-am format. E o hartă interactivă a instituțiilor publice, genul de interfață GIS pe care o construiesc zilnic pentru sectorul public: filtre, căutare, listă sincronizată cu harta și calculul celei mai apropiate instituții, cu ruta până la ea.",
     "disclaimer": "Mic demo construit pentru acest portofoliu, cu date publice din OpenStreetMap. Nu e un produs real și nu folosește nimic din proiectele la care lucrez; unele instituții pot lipsi sau pot avea date incomplete.",
     "hint": "Dă click oriunde pe hartă sau folosește locația ta ca să afli care e cea mai apropiată instituție.",
     "nearest": "Cea mai apropiată",
@@ -72,9 +72,12 @@
     "download": "Descarcă CV"
   },
   "hero": {
-    "description": "Dev front-end care transformă cafeaua în componente React",
+    "description": "Construiesc hărți și aplicații web pentru sectorul public.",
+    "downloadCv": "Descarcă CV-ul",
+    "email": "Scrie-mi un email",
+    "facts": "{{years}}+ ani de front-end, cu React, TypeScript și GIS",
     "greeting": "Salut, sunt",
-    "headline": "Construiesc interfețe curate și performante, pe care utilizatorii le adoră.",
+    "origin": "Născut și crescut în Maramureș",
     "personalNote": "Pasionat de alergare, fan fotbal, geek de motorsport"
   },
   "projects": {

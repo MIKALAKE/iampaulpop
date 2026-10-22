@@ -33,7 +33,7 @@
   "mapDemo": {
     "badge": "DEMO",
     "title": "Public services in Maramureș",
-    "intro": "I'm from Maramureș, so I picked my home county for this demo. It's an interactive map of public institutions, the kind of GIS interface I build every day for the public sector: filters, search, a list kept in sync with the map, and the nearest institution with a route to it.",
+    "intro": "I was born and raised in Maramureș, so I picked my home county for this demo. It's an interactive map of public institutions, the kind of GIS interface I build every day for the public sector: filters, search, a list kept in sync with the map, and the nearest institution with a route to it.",
     "disclaimer": "A small demo built for this portfolio with public OpenStreetMap data. It isn't a real product and uses nothing from the projects I work on; some institutions may be missing or incomplete.",
     "hint": "Click anywhere on the map or use your location to find the nearest institution.",
     "nearest": "Nearest",
@@ -72,9 +72,12 @@
     "download": "Download CV"
   },
   "hero": {
-    "description": "Front-end dev who turns coffee into React components",
+    "description": "I build maps and web apps for the public sector.",
+    "downloadCv": "Download my CV",
+    "email": "Email me",
+    "facts": "{{years}}+ years in front-end, with React, TypeScript and GIS",
     "greeting": "Hi, I'm",
-    "headline": "Building clean, performant interfaces that users love.",
+    "origin": "Born and raised in Maramureș",
     "personalNote": "Running enthusiast, football fan, motorsport geek"
   },
   "projects": {

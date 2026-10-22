@@ -36,6 +36,7 @@ import {
 } from 'lucide-react';
 
 import { GreatBritain, Romania } from './Flags';
+import MaramuresGate from './MaramuresGate';
 
 export {
   Apple,
@@ -60,6 +61,7 @@ export {
   LoaderCircle,
   LogOut,
   Mail,
+  MaramuresGate,
   Menu,
   MinusIcon,
   MonitorCog,

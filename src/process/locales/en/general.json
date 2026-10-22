@@ -10,7 +10,6 @@
   "demo": "Demo",
   "experience": "Experience",
   "fitness": "Fitness",
-  "getInTouch": "Get in Touch",
   "goBackHome": "Go Back Home",
   "light": "Light",
   "openMenu": "Open menu",
@@ -19,6 +18,5 @@
   "projects": "Projects",
   "skills": "Skills",
   "skipToContent": "Skip to content",
-  "system": "System",
-  "viewMyWork": "View My Work"
+  "system": "System"
 }

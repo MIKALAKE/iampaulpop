@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import I18n from 'Locales';
 import { track } from 'Helpers/analytics';
 import * as Logos from 'Assets/Logos';
+import { LINKEDIN_URL } from 'Constants';
 
 const socialLinks = [
   {
@@ -12,7 +13,7 @@ const socialLinks = [
   },
   {
     name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/paul-pop-5b276722b/',
+    url: LINKEDIN_URL,
   },
 ];
 

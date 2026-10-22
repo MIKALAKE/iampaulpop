@@ -30,9 +30,9 @@ export const LANGUAGES: Record<
     path: '/',
     title: 'Paul Pop — Dezvoltator Front-end | React & TypeScript',
     description:
-      'Paul Pop — dezvoltator front-end din Cluj-Napoca, specializat în React, TypeScript și interfețe moderne. Descoperă proiectele, experiența, abilitățile și CV-ul meu.',
+      'Paul Pop — dezvoltator front-end din Cluj-Napoca, născut în Maramureș. React, TypeScript și interfețe moderne: proiecte, experiență și CV.',
     keywords:
-      'Paul Pop, dezvoltator front-end, dezvoltator web, React, TypeScript, JavaScript, portofoliu, programator Cluj, front-end Cluj-Napoca, web developer România, CV',
+      'Paul Pop, dezvoltator front-end, dezvoltator web, React, TypeScript, JavaScript, portofoliu, programator Cluj, front-end Cluj-Napoca, programator Maramureș, web developer România, CV',
     imageAlt: 'Paul Pop — Dezvoltator Front-end, iampaulpop.ro',
     jobTitle: 'Dezvoltator Front-end',
   },
@@ -41,7 +41,7 @@ export const LANGUAGES: Record<
     path: '/en/',
     title: 'Paul Pop — Front-end Developer | React & TypeScript',
     description:
-      'Paul Pop — front-end developer based in Cluj-Napoca, specialised in React, TypeScript and modern interfaces. Explore my projects, experience, skills and CV.',
+      'Paul Pop — front-end developer in Cluj-Napoca, born in Maramureș. React, TypeScript and modern interfaces: projects, experience and CV.',
     keywords:
       'Paul Pop, front-end developer, web developer, React developer, TypeScript, JavaScript, portfolio, software developer Cluj, front-end Romania, CV',
     imageAlt: 'Paul Pop — Front-end Developer, iampaulpop.ro',
@@ -72,6 +72,10 @@ export const renderSeo = (lang: Language) => {
       '@type': 'PostalAddress',
       addressLocality: 'Cluj-Napoca',
       addressCountry: 'RO',
+    },
+    birthPlace: {
+      '@type': 'Place',
+      name: 'Maramureș, Romania',
     },
   };
 
