@@ -69,7 +69,8 @@
       "safety": "Emergency unit",
       "post": "Post office",
       "education": "School"
-    }
+    },
+    "unavailable": "This browser can't show the map because WebGL is turned off. Try Chrome, Firefox or Safari with hardware acceleration on."
   },
   "cv": {
     "description": "A snapshot of my experience and skills. Grab the full version below.",

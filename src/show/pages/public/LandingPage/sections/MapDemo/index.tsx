@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import { Component, lazy, Suspense, useEffect, useRef, useState, type ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
 import I18n from 'Locales';
@@ -7,11 +7,29 @@ import { SectionHeading } from 'Components';
 // MapLibre is ~800 KB; it only loads once the reader gets close to the section.
 const ServicesMap = lazy(() => import('./ServicesMap'));
 
-const MapPlaceholder = () => (
-  <div className='border-border bg-secondary/40 text-muted-foreground flex h-[380px] items-center justify-center border text-xs sm:h-[460px] lg:h-[600px]'>
-    {I18n.t('landingPage:mapDemo.loading')}
+const MapPlaceholder = ({ message = I18n.t('landingPage:mapDemo.loading') }) => (
+  <div className='border-border bg-secondary/40 text-muted-foreground flex h-[380px] items-center justify-center border p-6 text-center text-xs sm:h-[460px] lg:h-[600px]'>
+    {message}
   </div>
 );
+
+// MapLibre throws during render when the browser has no WebGL2 (old devices,
+// hardware acceleration off). Without this the whole page would go down with it.
+class MapErrorBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
+  state = { failed: false };
+
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+
+  render() {
+    if (this.state.failed) {
+      return <MapPlaceholder message={I18n.t('landingPage:mapDemo.unavailable')} />;
+    }
+
+    return this.props.children;
+  }
+}
 
 const MapDemo = () => {
   const placeholderRef = useRef<HTMLDivElement>(null);
@@ -37,7 +55,7 @@ const MapDemo = () => {
   }, []);
 
   return (
-    <section id='demo' className='w-full py-24'>
+    <section id='demo' className='w-full py-20'>
       <div className='container mx-auto max-w-5xl'>
         {/* index shifted 04→03 while Fitness is hidden; restore to 04 when Fitness returns */}
         <SectionHeading index='03' title={I18n.t('general:demo')} />
@@ -66,9 +84,11 @@ const MapDemo = () => {
 
         <div ref={placeholderRef}>
           {shouldLoad ? (
-            <Suspense fallback={<MapPlaceholder />}>
-              <ServicesMap />
-            </Suspense>
+            <MapErrorBoundary>
+              <Suspense fallback={<MapPlaceholder />}>
+                <ServicesMap />
+              </Suspense>
+            </MapErrorBoundary>
           ) : (
             <MapPlaceholder />
           )}

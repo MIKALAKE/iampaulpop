@@ -8,7 +8,7 @@ import cvFile from 'Assets/Paul_Pop_CV.pdf';
 
 const CV = () => {
   return (
-    <section id='cv' className='w-full py-24'>
+    <section id='cv' className='w-full py-20'>
       <div className='container mx-auto max-w-5xl'>
         {/* index shifted 07→06 while Fitness is hidden; restore to 07 when Fitness returns */}
         <SectionHeading index='06' title={I18n.t('general:cv')} />

@@ -75,7 +75,7 @@ const renderSkill = (skill: string, i: number) => {
       viewport={{ once: true }}
       transition={{ delay: i * 0.09 }}
       className='bg-secondary text-secondary-foreground border-border hover:border-primary/50 text-md flex items-center rounded-sm border px-3 py-1.5 font-mono transition-colors'>
-      <img src={logoSrc} alt='' className='mr-2 h-8 w-8' />
+      <img src={logoSrc} alt='' className='mr-2 size-5' />
 
       {skill}
     </motion.span>
@@ -83,7 +83,7 @@ const renderSkill = (skill: string, i: number) => {
 };
 
 const Skills = () => (
-  <section id='skills' className='w-full py-24'>
+  <section id='skills' className='w-full py-20'>
     <div className='container mx-auto max-w-5xl'>
       {/* index shifted 05→04 while Fitness is hidden; restore to 05 when Fitness returns */}
       <SectionHeading index='04' title={I18n.t('general:skills')} />

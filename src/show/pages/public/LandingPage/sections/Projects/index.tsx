@@ -54,7 +54,7 @@ const renderProject = (project: (typeof projects)[number], i: number) => {
           <p className='text-secondary-foreground mb-4 text-sm leading-relaxed'>
             {I18n.t(project.description)}
           </p>
-          <div className='flex flex-wrap gap-2'>{project.tags.map(renderTag)}</div>
+          <ul className='flex flex-wrap gap-2'>{project.tags.map(renderTag)}</ul>
         </div>
 
         {screenshotUrl && (
@@ -73,14 +73,16 @@ const renderProject = (project: (typeof projects)[number], i: number) => {
 };
 
 const renderTag = (tag: string) => (
-  <span key={tag} className='text-muted-foreground font-mono text-xs'>
+  <li
+    key={tag}
+    className='border-border text-muted-foreground border px-2 py-0.5 font-mono text-xs'>
     {tag}
-  </span>
+  </li>
 );
 
 const Projects = () => {
   return (
-    <section id='projects' className='px-6 py-24'>
+    <section id='projects' className='w-full py-20'>
       <div className='container mx-auto max-w-5xl'>
         {/* index shifted 06→05 while Fitness is hidden; restore to 06 when Fitness returns */}
         <SectionHeading index='05' title={I18n.t('general:projects')} />

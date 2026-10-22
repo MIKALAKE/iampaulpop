@@ -69,7 +69,8 @@
       "safety": "Unitate de intervenție",
       "post": "Oficiu poștal",
       "education": "Școală"
-    }
+    },
+    "unavailable": "Harta nu poate fi afișată în acest browser, pentru că nu are WebGL activat. Încearcă din Chrome, Firefox sau Safari, cu accelerarea hardware pornită."
   },
   "cv": {
     "description": "Un rezumat al experienței și abilităților mele. Descarcă versiunea completă mai jos.",

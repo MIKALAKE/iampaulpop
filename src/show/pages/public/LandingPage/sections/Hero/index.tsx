@@ -19,7 +19,7 @@ const fadeIn = (delay: number) => ({
 const Hero = () => (
   <div
     id='hero'
-    className='container mx-auto flex h-dvh w-full flex-col items-start justify-center px-4'>
+    className='container mx-auto flex min-h-[78svh] w-full flex-col items-start justify-center pt-24 pb-8'>
     <motion.p {...fadeIn(0.2)} className='text-primary mb-3 font-mono text-xs sm:text-sm'>
       {I18n.t('landingPage:hero.greeting')}
     </motion.p>

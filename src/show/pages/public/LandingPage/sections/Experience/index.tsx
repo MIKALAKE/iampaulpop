@@ -1,4 +1,5 @@
 import dayjs from 'dayjs';
+import 'dayjs/locale/ro';
 import { motion } from 'framer-motion';
 
 import I18n from 'Locales';
@@ -60,8 +61,9 @@ const renderAchievement = (achievementKey: string, j: number) => (
 
 const renderExperience = (exp: (typeof experiences)[0], i: number) => {
   const formatPeriod = (startDate: string, endDate: string | null) => {
-    const start = dayjs(startDate).format('MMM YYYY');
-    const end = endDate ? dayjs(endDate).format('MMM YYYY') : I18n.t('general:present');
+    const format = (date: string) => dayjs(date).locale(I18n.language).format('MMM YYYY');
+    const start = format(startDate);
+    const end = endDate ? format(endDate) : I18n.t('general:present');
     return `${start} — ${end}`;
   };
 
@@ -94,7 +96,7 @@ const renderExperience = (exp: (typeof experiences)[0], i: number) => {
 
 const Experience = () => {
   return (
-    <section id='experience' className='w-full py-24'>
+    <section id='experience' className='w-full py-20'>
       <div className='container mx-auto mb-12 max-w-5xl'>
         {/* index shifted 03→02 while Fitness is hidden; restore to 03 when Fitness returns */}
         <SectionHeading index='02' title={I18n.t('general:experience')} />

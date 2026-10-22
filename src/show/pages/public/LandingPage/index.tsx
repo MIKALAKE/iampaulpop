@@ -19,7 +19,7 @@ const LandingPage = () => {
         <meta name='description' content={I18n.t('helmet:description')} />
       </Helmet>
 
-      <div className='mx-auto flex h-full w-full flex-col items-center justify-center gap-44 px-7 lg:max-w-5xl lg:px-5'>
+      <div className='mx-auto flex h-full w-full flex-col items-center justify-center px-7 lg:max-w-5xl lg:px-5'>
         <Hero />
 
         <AboutMe />
