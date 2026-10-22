@@ -4,15 +4,20 @@ import { ArrowUpRight } from 'lucide-react';
 import I18n from 'Locales';
 import { track } from 'Helpers/analytics';
 import { SectionHeading } from 'Components';
-import invitatioShot from 'Assets/projects/invitatio.webp';
-import vanillaShot from 'Assets/projects/vanilla.webp';
+import invitatioVideo from 'Assets/projects/invitatio.mp4';
+import invitatioPoster from 'Assets/projects/invitatio-poster.webp';
+import vanillaVideo from 'Assets/projects/vanilla.mp4';
+import vanillaPoster from 'Assets/projects/vanilla-poster.webp';
+
+import ProjectVideo from './ProjectVideo';
 
 const projects = [
   {
     key: 'invitatio',
     title: 'invitatio.ro',
     url: 'https://invitatio.ro',
-    image: invitatioShot,
+    video: invitatioVideo,
+    poster: invitatioPoster,
     since: '2025',
     ongoing: true,
     tags: ['React', 'TypeScript', 'HeroUI', 'Hono', 'PostgreSQL'],
@@ -21,7 +26,8 @@ const projects = [
     key: 'vanillaCleaning',
     title: 'Vanilla Cleaning',
     url: 'https://vanilla-cleaning.ro',
-    image: vanillaShot,
+    video: vanillaVideo,
+    poster: vanillaPoster,
     since: '2025',
     ongoing: false,
     tags: ['React', 'Tailwind CSS', 'TinaCMS', 'SEO'],
@@ -33,8 +39,8 @@ type Project = (typeof projects)[number];
 const t = (key: string, options?: Record<string, unknown>) =>
   I18n.t(`landingPage:projects.${key}`, options);
 
-const trackProject = (project: Project, location: 'screenshot' | 'button') => {
-  track('project_click', { project_name: project.title, link_url: project.url, location });
+const trackProject = (project: Project) => {
+  track('project_click', { project_name: project.title, link_url: project.url });
 };
 
 const renderItem = (item: string) => (
@@ -67,23 +73,12 @@ const renderProject = (project: Project, i: number) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: i * 0.1 }}
-      className='bg-card border-border grid overflow-hidden border lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)]'>
-      <a
-        href={project.url}
-        target='_blank'
-        rel='noopener noreferrer'
-        tabIndex={-1}
-        onClick={trackProject.bind(null, project, 'screenshot')}
-        className='group bg-secondary border-border block border-b lg:border-r lg:border-b-0'>
-        <img
-          src={project.image}
-          alt={t('screenshotAlt', { name: project.title })}
-          width={1200}
-          height={750}
-          loading='lazy'
-          className='aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02] lg:sticky lg:top-24'
-        />
-      </a>
+      className='bg-card border-border grid overflow-hidden border lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]'>
+      <div className='bg-secondary border-border flex items-start justify-center border-b p-6 lg:border-r lg:border-b-0'>
+        <div className='w-full lg:sticky lg:top-24'>
+          <ProjectVideo src={project.video} poster={project.poster} title={project.title} />
+        </div>
+      </div>
 
       <div className='flex flex-col gap-5 p-6'>
         <div>
@@ -129,7 +124,7 @@ const renderProject = (project: Project, i: number) => {
           href={project.url}
           target='_blank'
           rel='noopener noreferrer'
-          onClick={trackProject.bind(null, project, 'button')}
+          onClick={trackProject.bind(null, project)}
           className='border-primary text-primary hover:bg-primary hover:text-primary-foreground flex w-fit items-center gap-2 border px-4 py-2 font-mono text-xs transition-colors sm:text-sm'>
           {t('labels.visit')}
           <ArrowUpRight aria-hidden className='size-4' />

@@ -94,7 +94,6 @@
       "result": "Rezultat",
       "visit": "Vezi site-ul"
     },
-    "screenshotAlt": "Pagina principală {{name}}",
     "invitatio": {
       "summary": "Planificator de nuntă gratuit, în română, pentru mirii care își organizează singuri nunta.",
       "role": "Produs, design, front-end și backend, singur",
@@ -117,7 +116,10 @@
         "Design gândit întâi pentru telefon, cu butoane de apel și WhatsApp mereu la îndemână."
       ],
       "result": "În ultimul an, aproximativ 40% din vizitatori au venit din căutarea Google."
-    }
+    },
+    "videoLabel": "Video de prezentare {{name}}",
+    "play": "Pornește video-ul",
+    "pause": "Oprește video-ul"
   },
   "skills": {
     "categories": {

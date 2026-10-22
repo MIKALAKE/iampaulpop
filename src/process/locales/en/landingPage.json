@@ -94,7 +94,6 @@
       "result": "Result",
       "visit": "Visit the site"
     },
-    "screenshotAlt": "{{name}} homepage",
     "invitatio": {
       "summary": "A free wedding planner in Romanian, for couples who organize their own wedding.",
       "role": "Product, design, front-end and back-end, on my own",
@@ -117,7 +116,10 @@
         "A mobile-first design with call and WhatsApp buttons always within reach."
       ],
       "result": "Over the last year, about 40% of visitors came from Google search."
-    }
+    },
+    "videoLabel": "{{name}} presentation video",
+    "play": "Play video",
+    "pause": "Pause video"
   },
   "skills": {
     "categories": {
